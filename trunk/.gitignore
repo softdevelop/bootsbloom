@@ -1,0 +1,14 @@
+/app/tmp/cache/models
+/app/tmp/cache/persistent
+/app/tmp/cache/views
+/app/tmp/logs
+/app/tmp/backup
+/app/tmp/imagecache
+/app/tmp/sessions
+/app/webroot/img/stuff
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
+/.idea

@@ -1,0 +1,2512 @@
+######################################## Contact us language constant###########################################################
+
+msgid "how_help_u"
+msgstr "How can we help you?"
+
+msgid "cont_question"
+msgstr "Question"
+
+msgid "cont_question_details"
+msgstr "Question details"
+
+msgid "cont_sender_name"
+msgstr "Name"
+
+msgid "cont_sender_email"
+msgstr "Your email address"
+
+msgid "cont_sender_lnk"
+msgstr "Link to your project or profile"
+
+msgid "cont_question_abt"
+msgstr "My question is about"
+
+msgid "plz_enter_question"
+msgstr "Please choose a question"
+
+msgid "plz_enter_details"
+msgstr "Please give us some details"
+
+msgid "plz_enter_name"
+msgstr "Please enter your name"
+
+msgid "plz_enter_email"
+msgstr "Please enter your email"
+
+msgid "plz_enter_profile_lnk"
+msgstr "Please enter profile link"
+
+msgid "plz_select_question_abt"
+msgstr "Please select a question"
+
+msgid "question_about"
+msgstr "Select Question About"
+
+msgid "problen_with_pledge"
+msgstr "Problems with my Pledge"
+
+msgid "BoostBloom_account_login"
+msgstr "Boostbloom login"
+
+msgid "images_videos"
+msgstr "Images & Videos"
+
+msgid "my_project_idea"
+msgstr "My Project Idea"
+
+msgid "getting_featured"
+msgstr "Getting Featured"
+
+msgid  "international"
+msgstr "International"
+
+msgid "press"
+msgstr "Press"
+
+msgid "other"
+msgstr "Other"
+
+msgid "Have_One"
+msgstr "if you have one"
+
+########################################Front Page Constant ##############################################################################
+
+msgid "frnt_no_category"
+msgstr "There are no categories available"
+
+msgid "frnt_sign_in"
+msgstr "ՄՈՒՏՔ ԳՈՐԾԵԼ"
+
+msgid "frnt_sign_up"
+msgstr "ԳՐԱՆՑՎԵԼ"
+
+msgid "frnt_discover_grate_project"
+msgstr "Բացահայտեք Հիանալի Նախագծեր"
+
+msgid "frnt_project"
+msgstr "ՆԱԽԱԳԾԵՐ"
+
+msgid "frnt_start_project"
+msgstr "ՍԿՍԵՔ ՁԵՐ ՆԱԽԱԳԻԾԸ"
+
+msgid "frnt_blog"
+msgstr "BLOG"
+
+msgid "frnt_faq"
+msgstr "FAQ"
+
+msgid "frnt_join_newsletter"
+msgstr "Join Newsletter"
+
+msgid "frnt_un_join_newsletter"
+msgstr "Un Join Newsletter"
+
+msgid "frnt_Staff_Picks"
+msgstr "ԸՆՏՐԱՆԻ"
+
+msgid "frnt_Comics"
+msgstr "Կոմիքսներ"
+
+msgid "frnt_dance"
+msgstr "Պար"
+
+msgid "frnt_art"
+msgstr "Արվեստ"
+
+msgid "frnt_design"
+msgstr "Ձավորում"
+
+msgid "frnt_fashion"
+msgstr "Նորաձություն"
+
+msgid "frnt_film"
+msgstr "Ֆիլմեր եւ Տեսանյութեր"
+
+msgid "frnt_food"
+msgstr "Սնունդ"
+
+msgid "frnt_game"
+msgstr "Խաղեր"
+
+msgid "frnt_music"
+msgstr "Երաժշտություն"
+
+msgid "frnt_photography"
+msgstr "Լուսանկարչություն"
+
+msgid "frnt_publishing"
+msgstr "Հրատարակչություն"
+
+msgid "frnt_technology"
+msgstr "Տեխնոլոգիաներ"
+
+msgid "frnt_theater"
+msgstr "Թատրոն "
+
+msgid "frnt_by"
+msgstr "By"
+
+msgid "frnt_project_not_find_try_again"
+msgstr "Sorry we couldn't find any projects in your area! Try a new city!"
+
+msgid "frnt_funded"
+msgstr "Funded"
+
+msgid "frnt_not_funded"
+msgstr "Not Funded"
+
+msgid "frnt_funding"
+msgstr "Funding"
+
+msgid "frnt_pledged"
+msgstr "Pledged"
+
+msgid "frnt_daystogo"
+msgstr "%s to Go"
+
+msgid "frnt_daystogo_for_main"
+msgstr "%s to Go"
+
+msgid "frnt_popular"
+msgstr "վայելող"
+
+msgid  "frnt_c_all"
+msgstr "See more"
+
+msgid  "frnt_each_every_project_independent_creation_of_someone_like_you"
+msgstr "Chaque projet %s est la création indépendante de quelqu'un comme vous. Souhaitez-vous monter un projet, ou tout simplement curieux de savoir comment tout cela fonctionne?" 
+
+
+msgid "frnt_ur_friend"
+msgstr "Your Friends"
+
+msgid "frnt_ur_location"
+msgstr "Your location"
+
+msgid "frnt_change_location"
+msgstr "Change city"
+
+msgid "frnt_here"
+msgstr "here"
+
+msgid "frnt_current_page"
+msgstr "Curated Pages"
+
+msgid "frnt_ur_backer_friend"
+msgstr "Your Friends are backers!"
+
+msgid "frnt_project_come_frm"
+msgstr "Where projects come from"
+
+msgid "frnt_lrn_mor"
+msgstr "Learn more"
+
+msgid "frnt_browse_categories"
+msgstr "BROWSE CATEGORIES"
+
+msgid "frnt_weekly_newsletter"
+msgstr "BOOSTBLOOM'S WEEKLY NEWSLETTER"
+
+msgid "frnt_project_report_email"
+msgstr "Get awesome projects delivered to your inbox each week."
+
+msgid "ur_subscriber_to_project_email"
+msgstr "You're signed up to receive our newsletter!"
+
+msgid "frnt_cont_bhoomboost"
+msgstr "CONNECT WITH BOOSTBLOOM"
+
+msgid "frnt_bhoom_facebook"
+msgstr "BOOSTBLOOM ON "
+
+msgid "frnt_ur_email"
+msgstr "Your Email Address"
+
+msgid "frnt_on_twitter"
+msgstr "Follow on Twitter"
+
+msgid "frnt_our_blog"
+msgstr "Read our blog"
+
+msgid "frnt_meet_team"
+msgstr "Meet the team"
+
+msgid "frnt_work_us"
+msgstr "Work with us"
+
+msgid "frnt_contact_us"
+msgstr "Contact us"
+
+msgid "frnt_privacy_police"
+msgstr "Privacy policy"
+
+msgid "frnt_term_use"
+msgstr "Terms of use"
+
+msgid "frnt_guideline"
+msgstr "Guidelines"
+
+msgid "frnt_help"
+msgstr "Help"
+
+msgid	"frnt_punch_line"
+msgstr	"The first funding platform for creative projects in Armenia"
+ 
+msgid "header_punch_line"
+msgstr "Where Creativity Meets its Match"
+
+msgid "user_profile"
+msgstr "%s Profile"
+
+msgid "my_profile"
+msgstr "My Profile"
+
+msgid "my_backer_history"
+msgstr "My Backer History"
+
+msgid "manage_your_pledge"
+msgstr "Manage Your Pledge"
+
+msgid "user_backer_history"
+msgstr "%s Backer History"
+
+msgid "edit_setting"
+msgstr "Settings"
+
+msgid "setting"
+msgstr "Settings"
+
+msgid "find_friend"
+msgstr "Find Friends"
+
+msgid "frnt_logout"
+msgstr "Log Out"
+
+msgid "frnt_change_country"
+msgstr "Change country"
+
+msgid "frnt_change_city"
+msgstr "Change city"
+
+msgid "frnt_country_no_project"
+msgstr "Sorry there is no project from this country."
+
+msgid "frnt_city_no_project"
+msgstr "Sorry there is no project from this city."
+
+msgid "frnt_descover_project"
+msgstr "Բացահայտեք Հիանալի Նախագծեր"
+
+msgid "frnt_start_new_project"
+msgstr "Սկսեք Ձեր Նախագիծը"
+
+msgid "empty_curated_pages"
+msgstr "Curated pages content are currently unavailable."
+
+######################################## Project details ##############################################################################
+
+msgid "projt_dtl_user_bio_project"
+msgstr "projects"
+
+msgid "projt_dtl_project_in"
+msgstr "project in"
+
+msgid "projt_dtl_send_msg"
+msgstr "send message"
+
+msgid "projt_dtl_project_home"
+msgstr "Project Home"
+
+msgid "projt_dtl_project_update"
+msgstr "Updates"
+
+msgid "projt_dtl_project_backers"
+msgstr "Backer(s)"
+
+msgid "projt_dtl_goal"
+msgstr "Goal"
+
+msgid "projt_dtl_of"
+msgstr "Of"
+
+msgid "frnt_By"
+msgstr "by"
+
+msgid "projt_dtl_project_comment"
+msgstr "Comments"
+
+msgid "faq"
+msgstr "Faq"
+
+msgid "reward_survey"
+msgstr "Reward Survey"
+
+msgid "projt_dtl_remind_me"
+msgstr "Remind Me"
+
+msgid "projt_dtl_min_pledge"
+msgstr "Minimum Pledge"
+  
+msgid "projt_dtl_about_project"
+msgstr "About this project "	
+	
+msgid "projt_dtl_or_more"
+msgstr "or more"
+
+msgid "projt_dtl_pledge"
+msgstr "Pledge"
+
+msgid "projt_dtl_estimated_delivery"
+msgstr "Estimated Delivery"	
+
+msgid "projt_dtl_project_by"
+msgstr "Project By"	
+	
+msgid "projt_dtl_backed"
+msgstr "backed"		
+
+msgid "projt_dtl_last_login"
+msgstr "Last Login"
+
+msgid "projt_dtl_connect_facebook"	
+msgstr "Connect on Facebook"
+
+msgid "projt_dtl_funded_on"	
+msgstr "This project will be funded on"	
+
+msgid "see_full_bio"	
+msgstr "See full bio"
+	
+msgid "project_detail_faqs"	
+msgstr "FAQ'"
+	
+msgid "project_detail_loading_player"	
+msgstr "Loading the player"	
+	
+msgid "project_detail_last_update"	
+msgstr "Last updated:"	
+	
+msgid "project_detail_have_question"	
+msgstr "Have a question? If the info above doesn't help, you can ask<br>the project creator directly."	
+	
+msgid "project_detail_ask_question"	
+msgstr "Ask a Question"	
+	
+msgid "project_detail_report_project_to"	
+msgstr "Report this project to"	
+	
+msgid "project_detail_backed"	
+msgstr "Backed"
+	
+msgid "project_detail_full_profile"	
+msgstr "Full profile"
+
+msgid  "project_detail_my_created_projects"	
+msgstr "Full profile"
+	
+msgid "project_detail_created_projects"	
+msgstr "Created projects"	
+	
+msgid "project_detail_video_preview"	
+msgstr "Video preview (not actual size)"
+
+msgid "project_detail_widget_viedo_code"	
+msgstr "After choosing a video size, copy and paste the embed code above."	
+
+msgid "project_detail_widget_Custom_size"	
+msgstr "Custom size:"	
+
+msgid "project_detail_widget_preview"	
+msgstr "Widget preview"	
+
+msgid "project_detail_project_not_live"	
+msgstr "THIS PROJECT IS NOT LIVE"
+
+msgid "project_detail_project_in_draft"	
+msgstr "This is only a draft that the creator has chosen to share."	
+
+msgid "project_detail_contact_me"	
+msgstr "Contact me"	
+
+msgid "project_detail_funded_successfully_raised_goal_on"	
+msgstr "Funded! This project successfully raised its funding goal on "	
+
+msgid "project_detail_project_reached_deadline_without_goal"	
+msgstr "This project reached the deadline without achieving its funding goal on "	
+	
+########################################Sign In Page##############################################################################
+
+msgid "sign_in"	
+msgstr "Sign In"
+
+msgid "OR"	
+msgstr "OR"
+msgid "sign_in_to_continue"	
+msgstr "Please Sign in to continue"	
+
+msgid "email"	
+msgstr "Email"
+
+msgid "password"	
+msgstr "Password"
+
+msgid "remember_me"	
+msgstr "Remember me"
+
+msgid "sign_me_in"	
+msgstr "Sign me in"
+
+msgid "i_forgot_password"	
+msgstr "I forgot my password"
+
+msgid "invalid_user_pass"	
+msgstr "Please enter valid email or password"
+
+msgid "sign_up_please_enter_name"	
+msgstr "Please enter name"
+
+msgid "sign_up_red_mark_mean"	
+msgstr "Your email will remain confidential"
+
+########################################forgot password ##############################################################################
+
+msgid "forgot_ur_password"	
+msgstr "Forgot Your Password ?"
+
+msgid "tel_us_email"	
+msgstr "Tell us the email you used to sign up and we'll get you logged in."
+
+########################################reset password#######################################
+
+msgid "stting_passwrd"	
+msgstr "Setting a Password"
+
+msgid "create_6_character_long_passwrd"	
+msgstr "Please create a password that is at least 6 characters long."
+
+msgid "ur_new_passwrd"	
+msgstr "Your New Password"
+
+msgid "confirm_new_passwrd"	
+msgstr "Confirm Your New Password"
+
+msgid "update_password"	
+msgstr "Update password"
+
+msgid "reset_password_link_expire_or_used_once"	
+msgstr "Sorry, that password reset link has expired or has already been used."
+
+msgid "reset_password_congratulation_password_successfuly"	
+msgstr "Congratulation!, your password was successfully reset."
+	
+########################################Sign Up Page#######################################
+
+msgid "new_to_boostbloom"	
+msgstr "New to BoostBloom?"
+	
+msgid "account_is_required_to_continue"	
+msgstr "A BoostBloom account is required to continue."	
+
+msgid "used_for_notification"	
+msgstr "Used for project and account notifications."	
+
+msgid "re_enter_email"	
+msgstr "RE-ENTER EMAIL"	
+
+msgid "re_enter_password"	
+msgstr "RE-ENTER PASSWORD"	
+
+msgid "discover_new_projects"	
+msgstr "Discover new projects"	
+
+msgid "with_weekly_newsletter"	
+msgstr "with our weekly newsletter"	
+
+msgid "by_signing_up"	
+msgstr "By signing up, you agree to our"	
+
+msgid "sign_me_up"	
+msgstr "Sign me up"	
+
+######################################## Facebook SignUp##############################################################################
+
+msgid "sign_in_facebook"	
+msgstr "Sign in with Facebook"
+
+msgid "its_fast_easy"	
+msgstr "It's fast and easy."
+
+msgid "we_never_post"	
+msgstr "We will never post anything without your permission."
+
+######################################## User Model Error ##############################################################################
+
+msgid "letter_space_only"	
+msgstr "Only use letters and spaces please."
+
+msgid "valid_email"	
+msgstr "Please enter a valid Email Address."
+
+msgid "email_alrady_save"	
+msgstr "This email has already been used."
+
+msgid "at_least_6_character"	
+msgstr "Password must be at least 6 characters long."
+
+msgid "password_not_match"	
+msgstr "Passwords do not match."
+
+msgid "alrady_registered"	
+msgstr "This email is already registered."
+
+msgid "email_confirm_email_not_match"	
+msgstr "Email and Confirm Email fields should match."
+
+msgid "login_wit_facebook"	
+msgstr "You're signed-up to BoostBloom with your Facebook account. To log in, please click the 'Sign in with Facebook' button."
+
+msgid "account_deleted_contact_site_admin"	
+msgstr "Your %s account has been deleted. To recover your account please contact %s using 'Contact Us'."
+
+########################################News letter subscription message for front####################################### 
+
+msgid	"email_not_right"
+msgstr	"Sorry, that email doesn't look right"
+
+msgid	"email_already_subscribed"
+msgstr	"You are already subscribed for newsletters."
+
+######################################## Edit profile #######################################
+
+msgid	"profile"
+msgstr	"profile"
+
+msgid	"account"
+msgstr	"Account"
+
+msgid	"notification"
+msgstr	"Notifications"
+
+msgid	"full_name"
+msgstr	"Full Name"
+
+msgid	"location"
+msgstr	"Project's Location"
+
+msgid	"user_location"
+msgstr	"Your Location"
+
+msgid	"users_location_msg"
+msgstr	"This is where you live. This location will only appear in your profile, not on your project page."
+
+msgid	"time_zone"
+msgstr	"Time Zone"
+
+msgid	"biography"
+msgstr	"Biography"
+
+msgid	"vanity_url"
+msgstr	"URL to your Profile"
+
+msgid	"websites"
+msgstr	"Websites"
+
+msgid	"picture"
+msgstr	"Picture"
+
+msgid	"save_setting"
+msgstr	"Save Settings"
+
+msgid	"space_letter"
+msgstr	"Only letters and spaces please."
+
+msgid	"display_on_profile"
+msgstr	"Your name is displayed on your profile"
+
+msgid	"type_location"
+msgstr	"Type your location, e.g. Brooklyn,CA."
+
+msgid	"character_300_limit"
+msgstr	"We suggest a short bio. If it's 300 characters."
+
+msgid	"add"
+msgstr	"ADD"
+
+msgid	"upload"
+msgstr	"UPLOAD"
+
+msgid	"remove"
+msgstr	"Remove"
+
+msgid	"hide"
+msgstr	"hide"
+
+msgid	"news_letter"
+msgstr	"Weekly newsletter"
+
+msgid	"receive_weekly_newsletter"
+msgstr	"I'd like to receive the weekly newsletter"
+
+msgid	"notify_by_mail"
+msgstr	"Notify me by email when"
+
+msgid	"notify_follower_backs_launch"
+msgstr	"Someone I follow backs or launches a project"
+
+msgid	"notify_getting_new_follower"
+msgstr	"I get new followers (daily digest)"
+
+msgid	"notify_created_project_pledges"
+msgstr	"Projects I've created receive new pledges"
+
+msgid	"notify_created_project_comment"
+msgstr	"Projects I've created receive new comments"
+
+msgid	"notify_backing_project_update"
+msgstr	"Projects I'm backing post new updates"
+
+msgid	"change_password"
+msgstr	"Change Password"
+
+msgid	"confirm_password"
+msgstr	"Confirm Password"
+
+msgid	"new_password"
+msgstr	"New Password"
+
+msgid	"facebook"
+msgstr	"Facebook"
+
+msgid	"delete_account"
+msgstr	"Delete Account"
+
+msgid	"email_verification"
+msgstr	"Re-send verification email"
+
+msgid	"unverified"
+msgstr	"Unverified"
+
+msgid	"editing_setting"
+msgstr	"Settings"
+
+msgid	"send_email_verification"
+msgstr	"Send verification email"
+
+msgid	"profile_enter_url"
+msgstr	"use www.before website url"
+
+msgid	"profile_enter_url_sub"
+msgstr	"Supporting links are links potential backers click on to know more about you"
+
+msgid	"profile_connect_to"
+msgstr	"Connect to"
+
+msgid	"profile_disconnect"
+msgstr	"Disconnect"
+
+msgid	"edit_user_edit_account"
+msgstr	"Edit Account"
+
+msgid	"edit_user_edit_notification"
+msgstr	"Edit Notification"
+
+msgid	"edit_user_tnks_ur_email_address_verified"
+msgstr	"Thanks, your email address is verified!"
+
+msgid	"edit_user_sorry_email_cout_not_verified"
+msgstr	"Sorry! Email could not be verified."
+
+msgid	"edit_user_email_restore_successfully"
+msgstr	"Your email address has been restored."
+
+msgid	"edit_user_email_not_restore_successfully"
+msgstr	"Your email address has not been restored."
+
+msgid	"front_connect_with_facebook"
+msgstr	"Connect with Facebook"
+
+######################################## profile page ######################################
+	
+msgid	"edit_profile"
+msgstr	"Settings"
+
+msgid	"add_websites"
+msgstr	"Add websites"	
+
+msgid	"website"
+msgstr	"WEBSITES"	
+
+msgid	"let_ppl_know"
+msgstr	"Let people know more about you."	
+
+msgid	"joined_boostbloom_on"
+msgstr	"joined boostBloom on"	
+
+msgid	"activity"
+msgstr	"Activity"
+
+msgid	"recent_activity"
+msgstr	"Recent Activity"
+
+msgid	"no_activity_yet"
+msgstr	"No activity yet"
+
+msgid	"me"
+msgstr	"Me"
+
+msgid	"my_account"
+msgstr	"My Account"
+
+msgid	"my_created_project"
+msgstr	"My Projects"
+
+msgid	"all_my_projects"
+msgstr	"All My Projects"
+
+msgid	"no_project_yet"
+msgstr	"No Projects Created Yet"
+
+msgid	"created_projects"
+msgstr	"Created Projects"
+
+msgid	"profile_user_created_project"
+msgstr	"%s Created Project"
+
+msgid	"backed_projects"
+msgstr	"Backed Projects"
+
+msgid	"starred_projects"
+msgstr	"Starred Projects"
+
+msgid	"project_not_launched"
+msgstr	"Project Not Launched"
+
+msgid	"project_launched"
+msgstr	"Project Launched"
+
+msgid	"launched"
+msgstr	"Launched"
+
+msgid	"only_u_can_c"
+msgstr	"only you can see this"
+
+msgid	"profile_activity_empty_msg"
+msgstr	"Here you’ll find the projects you’ve launched, backed or followed.<br />You can also read the comments you’ve receive from backers, all in one place!<br />But (for now!) this page looks empty!<br />%s or %s"
+
+msgid	"profile_activity_empty_msg_other_users"
+msgstr	"Here you’ll find the projects %s has launched, backed or followed.<br /> You may also read the comments backers have made on his projects. All in one place!"
+
+msgid	"profile_project_update"
+msgstr	"Project update"
+
+msgid	"profile_project_faq"
+msgstr 	"Project faq"
+
+msgid	"profile_project_backer_empty"
+msgstr	"It seems you haven’t backed any projects. Let’s change that! %s"
+
+msgid	"profile_project_backer_empty_other_users"
+msgstr	 "It seems %s hasn’t backed any projects."
+
+msgid	"profile_project_starred_empty"
+msgstr	"It appears you’re not following any projects! Click on the star on top of each project and we promise you’ll never miss any updates on your favorite projects. %s"
+
+msgid	"profile_project_starred_empty_other_users"
+msgstr	"It appears that %s isn’t following any projects!"
+
+msgid	"profile_project_created_empty"
+msgstr	"It looks like you’ve not started any projects yet! %s"
+
+msgid	"profile_project_created_empty_other_users"
+msgstr	"It looks like %s hasn’t started any projects yet!"
+
+msgid	"profile_start_your_project_lnk"
+msgstr	"Start your project now!"
+
+msgid	"profile_find_now_lnk"
+msgstr	"Follow now!"
+
+msgid	"profile_untitle_project"
+msgstr	"Untitled"
+
+msgid	"profile_stared_my_stared_project"
+msgstr	"My Starred Projects"
+
+msgid	"profile_stared_user_stared_project"
+msgstr	"%s Starred Project"
+
+######################################## Messages #######################################
+
+msgid	"inbox"
+msgstr	"Inbox"
+
+msgid	"view_all_notifications"
+msgstr	"View all notifications"
+
+msgid	"View_messages"
+msgstr	"View all messages"
+
+msgid	"View_activity"
+msgstr	"View recent activity"
+
+msgid	"frnt_messages_empty"
+msgstr	"You have not received any messages yet."
+
+msgid	"frnt_messages_loding"
+msgstr	"Message Loading..."
+
+msgid	"frnt_notification_empty"
+msgstr	"You have not received any notifications yet."
+
+########################################Discover ##############################################################################
+
+msgid	"discover"
+msgstr	"Բացահայտեք Նախագծեր"
+
+msgid	"abound"
+msgstr	"Passion, ideas, and ambition abound in Armenia. Start exploring!"
+
+msgid	"staff_picker"
+msgstr	"Ընտրանի"
+
+msgid	"c_more_staff_picker"
+msgstr	"See more staff picks"
+
+msgid	"popular_this_week"
+msgstr	"Popular This Week"
+
+msgid	"c_more_popular_project"
+msgstr	"See more popular projects"
+
+msgid	"recent_successful"
+msgstr	"Recently Successful"
+
+msgid	"c_more_successful_project"
+msgstr	"See more successful projects"
+
+msgid	"most_funded"
+msgstr	"Most Funded"
+
+msgid	"fascinating_post_project_new_old"
+msgstr	"Latest projects updates!"
+
+msgid	"c_more_project_update"
+msgstr	"See more project updates"
+
+msgid	"c_more_most_funded_project"
+msgstr	"See more most funded projects"
+
+msgid	"featured"
+msgstr	"Featured"
+
+msgid	"Popular"
+msgstr	"վայելող"
+
+msgid	"recent_launched"
+msgstr	"Recently Launched"
+
+msgid	"ending-soon"
+msgstr	"Ending Soon"
+
+msgid	"small_project"
+msgstr	"Small Projects"
+
+msgid	"curated_pages"
+msgstr	"Curated Pages"
+
+msgid	"Categories"
+msgstr	"Categories"
+
+msgid	"search_countrys"
+msgstr	"Search countries"
+
+msgid	"most_pledge_this_week"
+msgstr	"These projects generated the most pledges this week."
+
+msgid	"discover_project"
+msgstr	"Բացահայտեք Նախագծեր"
+
+msgid	"news_fresh_project"
+msgstr	"The newest and freshest projects on "
+
+msgid	"time_out_deadline_reached"
+msgstr	"Time is running out! Last chance to get in before the deadline is reached."
+
+msgid	"most_funded_project_in"
+msgstr	"The most funded projects in"
+
+msgid	"history"
+msgstr	"history"
+
+msgid	"Search"
+msgstr	"Search"
+
+msgid	"project_funded_for"
+msgstr	"projects found for"
+
+msgid	"recen_update"
+msgstr	"Recent Updates"
+
+msgid	"no_project_in_this"
+msgstr	"Your search did not match any projects."
+
+msgid    "make_sure"
+msgstr	"Make sure all words are spelled correctly or try another location."
+
+msgid    "try_different_keyword"
+msgstr	"Try different keywords."
+
+msgid    "try_more_general_keyword"
+msgstr	"Try more general keywords."
+
+msgid    "try_fewer_keyword"
+msgstr	"Try fewer keywords."
+
+msgid	"staff_pcker_we_like_they_r_creative_inspiring"
+msgstr	"Staff Picks are projects we believe you will like."
+
+########################################start project #######################################
+
+msgid	 "created_on"
+msgstr 	"Created on"
+
+msgid    "frnt_start_anew_project"
+msgstr    "Սկսեք Ձեր Նախագիծը"
+
+msgid	"look_you_have_alrady_project"
+msgstr	"Looks like you've already started the project(s) below:"
+
+#msgid	"here_you_can_edit"
+#msgstr	"<b>Here you can find the projects you’ve already started</b><br /><ul class="grey14 mt5 lh18 pl5"><li>Click on "edit"to edit the project you’ve started.</li><li>Click "Delete project"if you prefer to delete a project</li></ul>"
+
+msgid	"here_you_can_edit"
+msgstr	"<b>Start a new project or edit a project you’ve already started</b><br />"
+
+msgid	"here_you_can_edit_down"
+msgstr	"<b>You can also start a new project<b>"
+
+msgid	"project_independent_someone_like_u"
+msgstr	"project is the independent creation of someone like you!"
+
+msgid	"each_every"
+msgstr	"Each and every"
+
+msgid	"make_awesome_project"
+msgstr	"How to make an awesome %s project"
+
+msgid	"we_help_ppl"
+msgstr	"We help people"
+
+msgid	"like_u"
+msgstr	"like you"
+
+msgid	"fund_creative_project"
+msgstr	"fund creative projects"
+
+msgid	"world_largest_funding_plateform"
+msgstr	"is Armenia's first funding platform."
+
+msgid	"every_amazing_project_world"
+msgstr	"Every week, people around the globe support project from the worlds of"
+
+msgid	"start_film"
+msgstr	"film"
+
+msgid	"other_creative_fields"
+msgstr	"and other creative fields"
+
+msgid	"user_city_error"
+msgstr	"Please select city."
+
+######################################## HELP ##############################################################################
+
+msgid	"Faq_title"
+msgstr	"SOMETHING IS NOT CLEAR? THIS IS THE PLACE TO BE."
+
+msgid	"Faq_boostbloom_basic"
+msgstr	"Boostbloom Basics"
+
+msgid	"see_all"
+msgstr	"See all"
+
+msgid	"faq_creators"
+msgstr	"Creators"
+
+msgid	"faq_backer"
+msgstr	"Backers"
+
+msgid	"chk_out"
+msgstr	"Check it out!"
+
+msgid	"faq_body_text"
+msgstr	"Boostbloom FAQ is good way to find inspiration, tips, and tools for a successful project"
+
+msgid	"guidelines"
+msgstr	"Guidelines"	
+				
+msgid	"Faq_guidelines"
+msgstr	"Armenian creators, worldwide backers"	
+
+msgid	"guidelines_lnk"
+msgstr	"These guidelines"	
+
+msgid	"faq_guideline_text"
+msgstr	"is a funding platform for creative projects in Armenia"	
+
+msgid	"faq_Stats"
+msgstr	"Promoting Your Project: <br /> Sharing"
+
+msgid	"faq_Stats_text"
+msgstr	"Stats are updated daily"		
+
+msgid	"faq_style_guide"
+msgstr	"Logos and Images:<br /> Goodies For Your Project"	
+
+msgid	"faq_style_guide_lnk"
+msgstr	"View the style guide"		
+		
+msgid	"faq_style_guide_text"
+msgstr	"Download high quality Boostbloom logos and badges to use on your project."
+
+msgid	"faq_contact_us"
+msgstr	"Are you a member of the press interested in covering "	
+	
+msgid	"faq_let_us_knw"
+msgstr	"Let us know"	
+
+msgid	"faq_empty_msg"
+msgstr	"There is no faq for this project yet"	
+	
+msgid	"project_faq_answer"
+msgstr	"Answer"	
+
+msgid	"project_faq_question_update_successfily"
+msgstr	"Thank you, this item was successfully updated."
+
+msgid	"project_faq_question_deleted_successfily"
+msgstr	"Thank you, this item was deleted."
+
+msgid	"project_faq_question_post_successfily"
+msgstr	"Thanks, this will help! Your question and answer will appear in your Faq. Add more!"
+
+msgid	"project_faq_other_help_content"
+msgstr	"Other help content"	
+
+msgid	"project_faq_help_center"
+msgstr	"Help Center"	
+
+msgid	"project_faq_help_school_no"
+msgstr	"No"
+
+msgid	"project_faq_empty_category_post"
+msgstr	"There is no post yet in this category "				
+
+msgid	"project_faq_school_previous"
+msgstr	"Previous"	
+
+msgid	"project_faq_help_guidline_mission_focus_community"
+msgstr	"articulate our mission and focus, as well as the rules of conduct for our community."	
+
+msgid	"Faq_Text_Message"
+msgstr	"THIS IS THE FAQ. WHOLE FAQ AND NOTHING BUT THE FAQ"				
+
+msgid	"faq_guideline_text_1"
+msgstr	"%s is a platform where creative people in Armenia find support for their projects. We're open to projects in design, music, film creation, charity and more! %s Backers can be from anywhere in the world. %s Visit our %s or full %s to know everything!"
+
+msgid	"faq_Stats_Text_1"
+msgstr	"%s %s contains our advice on how to share your project online AND offline.%s These tips will boost your chances to see you project funded."
+
+msgid	"faq_Sharing"
+msgstr	"Sharing"
+
+msgid	"faq_Goodies_text_lnk"
+msgstr	"Here!"
+
+msgid	"faq_Goodies_text"
+msgstr	"Download BoostBloom logos and images in HD to promote your project. %s Visit %s"
+
+###########################################BEST PRACTICES###########################################################################
+
+msgid 	 "Boostbloom_Actions"
+msgstr	 "6 Boostbloom Actions"	
+
+msgid	"For"
+msgstr	"For"
+
+msgid	 "Successful"
+msgstr	 "Successful"
+
+msgid	"Projects"
+msgstr	 "Projects"
+
+msgid	 "Make_video"
+msgstr 	"Make a Video"
+
+msgid 	"Offer_Great_Reward"
+msgstr	 "Offer 3 to 5 Great Rewards"
+
+msgid	"Post_Link_Page"
+msgstr	"Post Links to Your Other Pages"
+
+msgid	 "Share_Project"
+msgstr	"Share Your Project"
+
+msgid	"Update_Few_days"
+msgstr	 "Update Every Few Days"
+
+msgid 	"Answer_Questions"
+msgstr	 "Answer Questions"
+
+msgid	 "Boostbloom_Mistake"
+msgstr 	"6 Boostbloom Mistakes"
+
+msgid	"Unrealistic_Goal"
+msgstr	"An Unrealistic Goal"
+
+msgid 	"No_Video"
+msgstr 	"No Video"
+
+msgid	 "Never_Tell"
+msgstr 	"Never Tell Anyone"
+
+msgid	 "Uninspiring_Rewards"
+msgstr	 "Uninspiring Rewards"
+
+msgid	"Profit_Passion"
+msgstr 	"Profit not Passion"
+
+msgid	"No_Upadte"
+msgstr	"No Update"
+
+msgid	"faq_body_text_1"
+msgstr	"OUR BEST TIPS TO MAKE A SUCCESSFUL PROJECT"
+
+########################################Blog category ##############################################################################
+
+msgid	"blog_browse"
+msgstr	"Browse"
+
+msgid	"blog_project_day"
+msgstr	"Project of the day"	
+
+msgid	"blog_project_love"
+msgstr	"Projects we love"
+	
+msgid	"blog_no_project_update"
+msgstr	"There is no project update"
+		
+msgid	"blog_Subscribe"
+msgstr	"Subscribe "	
+		
+msgid	"blog_no_comment"
+msgstr	"There is no comment, do add yours"	
+		
+msgid	"blog_comment_not_allwed"
+msgstr	"Comment is not allowed "	
+	
+msgid	"blog_leave_comment"
+msgstr	"Leave a comment"	
+	
+msgid	"blog_leave_comment_text"
+msgstr	"Please limit your comment to the issues at hand.<br>Comments promoting a project will be removed. Thanks!"	
+	
+msgid	"blog_share_post"
+msgstr	"Share this post"	
+	
+msgid	"blog_recent_post"
+msgstr	"Recent posts "	
+	
+msgid	"blog_browse_categories"
+msgstr	"Browse categories"
+
+msgid	"blog_login_to_comment"
+msgstr	"Log in to leave a comment"	
+
+msgid	"blog_load_more"
+msgstr	"Load More"	
+
+msgid	"blog_post_comment"
+msgstr	"Post Comment"	
+
+msgid	"blog_empty_msg"
+msgstr	"There is no post yet. We are Coming soon with blogs ."
+
+msgid	"blog_left_bar_text"
+msgstr	"This week's projects are doing double duty: a set of cute Armenian magnets that are also word puzzles, an app that can make both music and robots, and an audio storytelling series that inspires beautiful animation."
+
+msgid	"blog_lisa_conference_leaders"
+msgstr	"The LISA Conference: Leaders in Software and Art"
+
+msgid	"blog_comment_posted_waiting_approval"
+msgstr	"Comment posted successfully. Waiting for Admin approval."
+
+msgid	"blog_post_reply"
+msgstr	"Reply"
+
+msgid	"blog_post_show_reply"
+msgstr	"Show All Reply"
+
+msgid	"project_creator_reply_below"
+msgstr	"Please enter reply below"
+
+msgid    "projt_dtl_project_reply"
+msgstr    "Reply"
+
+msgid	"model_updatecomment_please_enter_reply"
+msgstr	"Please enter reply"
+
+########################################newsletter #######################################
+
+msgid	"newsletter_title"
+msgstr	"Newsletters are sent out once a week and feature projects we love!"	
+
+msgid	"newsletter_archive"
+msgstr	"Newsletter Archive"
+
+msgid	"newsletter_empty_msg"
+msgstr	"The newsletter is in the making! Almost done!."
+
+msgid	"newsletter_detail_top_msg"
+msgstr	"This week's projects will turn your digital pixels into frame-worthy prints, teach you to build robots from scratch, and show you just how (ahem) illuminating a simple poem can be."	
+
+msgid	"newsletter_view_all_newsletter"
+msgstr	"View all newsletters"
+
+########################################my Backer history #######################################
+
+msgid	 "backer_history_project_detail"
+msgstr 	"Project Detail"		
+
+msgid 	"backer_history_pledge_detail"
+msgstr	 "Pledge Detail"
+
+msgid	 "backer_history_action"
+msgstr	 "Action"
+
+msgid	 "backer_history_empty_msg"
+msgstr	 "You haven't backed any projects!"	
+
+msgid	 "backer_history_pledge_amount"
+msgstr	 "You have pledged the amount"
+	
+msgid	 "backer_history_regarding_reward"
+msgstr	 "regarding reward"
+	
+msgid	 "backer_history_project_closed"
+msgstr	 "Project is now closed."
+
+msgid 	"backer_history_project_cancelled"
+msgstr	"Project has been cancelled. You don’t need to do anything: your pledge has been automatically cancelled: no money was or will be taken from your account."
+	
+msgid	 "backer_history_no_msg_found"
+msgstr	 "Sorry! No messages found."	
+	
+msgid	 "backer_history_on"
+msgstr	 "on"	
+	
+msgid	 "backer_no_thanks"
+msgstr	 "No Thanks"	
+	
+msgid	 "backer_or_more"
+msgstr	 "or More"	
+	
+msgid 	"backer_cancel_pledge"
+msgstr	 "Cancel Pledge"	
+	
+msgid	"backer_update_pledge"
+msgstr	 "Update Pledge"	
+
+msgid 	"pledge_continue_next"
+msgstr	"Continue to next step"
+
+msgid	 "pledge_continue_payapl"
+msgstr	 "Continue to Paypal"
+	
+########################################project update #####################################################################	
+	
+msgid	"project_more_project_update"
+msgstr	"There is no Update "	
+	
+msgid	"project_update"
+msgstr	"Update"
+	
+msgid	"project_update_empty_msg"
+msgstr	"Project owner did not post any update yet ."
+	
+msgid	"project_update_no_update"
+msgstr	"There is no update related to this project"
+	
+msgid	"project_update_update_project_title"
+msgstr	"Project Update"	
+
+msgid	"project_update_update_empty_msg"
+msgstr	"There is no update for this project"
+	
+msgid	"project_update_update_title"
+msgstr	"Title"
+		
+msgid	"project_report_found"
+msgstr	"No record found!"		
+	
+msgid	"project_update_posted_successfully"
+msgstr	"Update posted successfully"	
+
+msgid	"project_update_posted_update_successfully"
+msgstr	"Thank you for your update"	
+	
+msgid	"project_update_comment_posted_successfully"
+msgstr	"Comment posted!"		
+
+msgid	"project_update_backer_project_removed_successfully"
+msgstr	"Your pledge has been cancelled."	
+
+msgid	"project_created_successfully_wait_admin_approval"
+msgstr	"Project created successfully! Just waiting for admin approval."	
+
+msgid	"project_detail_update_successfully"
+msgstr	"Project details updated successfully."	
+
+msgid	"project_ur_owner_you_can_not_back_project"
+msgstr	"You are the owner of this project so you can't back this project"
+
+msgid	"project_funding_this_project_has_closed"
+msgstr	"Funding for this project has been closed."	
+
+msgid	"project_you_already_backed_this_project"
+msgstr	"You already backed this project. To make a change on your pledge, click on your picture on top of Boostbloom's homepage and choose 'Manage my pledge'."	
+
+msgid	"project_sorry_you_must_pledge_least"
+msgstr	"Sorry, you must pledge at least $"	
+
+msgid	"project_to_select_that_reward"
+msgstr	"to select that reward"	
+
+######################################## project survey ########################################################################
+
+msgid	"project_survey"
+msgstr   "Survey"
+
+msgid	"project_survey_subject"
+msgstr    "Subject"
+
+msgid 	"project_survey_message"
+msgstr    "Message"
+
+msgid	"project_survey_reward"
+msgstr   "For"
+
+msgid	"all_reward_backers"
+msgstr   "All Backers"
+
+msgid	"backers_of_pledge_amount"
+msgstr   "Backers with pledge amount of %s %s"
+
+msgid	"project_survey_select_reward"
+msgstr   "Please select a reward amount"
+
+msgid	"model_survey_please_enter_subject"
+msgstr   "Please enter the subject of the survey"
+
+msgid	"model_survey_please_enter_message"
+msgstr    "Please enter the survey message"
+
+msgid	"project_survey_posted_successfully"
+msgstr	"Your survey has been sent! Backers will receive it by email."	
+
+msgid	"project_survey_empty_msg"
+msgstr	"You have not created any survey message yet."
+
+msgid	"project_survey_title_msg"
+msgstr	"You must create a survey to contact your backers and know where to ship their rewards."
+
+########################################project backer ##########################################################################
+
+msgid	"project_backer_project_backer"
+msgstr	"Project Backer"
+
+msgid	"project_backer_empty_msg"
+msgstr	"Nobody has backed this project yet."
+
+msgid	"project_backer_title_msg"
+msgstr	"Backers' names are updated every 10 backers randomly. If you just backed and you do not see your name yet, stay tuned! All names will be listed when the project ends no matter what."
+
+######################################## project backer comment #######################################
+
+msgid	 "project_backer_comment_question"
+msgstr 	"Only backers can post comments. If you have a question,"
+
+msgid 	"project_backer_comment_ask_question"
+msgstr	 "ask the project creator."
+
+msgid	 "project_backer_comment_login_comment"
+msgstr	 "Log in to leave a comment (for backers only)"
+
+msgid	 "project_backer_comment_Creator"
+msgstr	 "Creator"
+
+msgid	"project_backer_comment_empty_msg"
+msgstr	"There is no comment on this project ."
+
+######################################## project #######################################
+
+msgid	"project_delete"
+msgstr	"Delete Your Project"
+
+msgid	"project_r_u_sure_to_delete"
+msgstr	"Are you sure you want to delete your"
+
+msgid	"project_action_can_not_be_undo"
+msgstr	"project? This action cannot be undone and will immediately delete this project from the system."
+
+msgid	"project_delete_password_verification"
+msgstr	"password for verification:"
+
+msgid	"project_delete_enter_ur"
+msgstr	"Enter your"
+
+msgid	"project_delete_project"
+msgstr	"Delete project"
+
+msgid	"project_no_never"
+msgstr	"No, never mind"
+
+msgid	"project_forgot_password"
+msgstr	"Forgot your password?"
+
+msgid	"project_send_email_reset"
+msgstr	"Send me an email to reset"
+
+######################################## project edit #######################################
+
+msgid	 "project_edit_basic"
+msgstr	 "Basics"
+
+msgid	"project_edit_ur_project"
+msgstr	 "Edit Your Project"
+
+msgid	 "project_edit_rewards"
+msgstr 	"Rewards"
+
+msgid	"project_edit_story"
+msgstr	"Story"
+
+msgid	 "project_edit_about_you"
+msgstr 	"About You"
+
+msgid	"project_edit_review"
+msgstr	 "Review"
+
+msgid	"project_edit_preview"
+msgstr	"Preview"
+
+msgid	"project_edit_have_question"
+msgstr	"Have a question?"
+
+msgid	"project_edit_drop_line"
+msgstr	"Drop us a line"
+
+msgid 	"project_edit_eligibility_requirements"
+msgstr	"Eligibility requirements"
+
+msgid	"project_edit_eligibility_to_start"
+msgstr	"To be eligible to start a %s project, you"
+
+msgid	"project_edit_age_older_limit"
+msgstr	"You are 18 years of age or older."
+
+msgid	"project_edit_permanent_resident_security"
+msgstr	"You are an Armenian resident"
+
+msgid	"project_edit_address_bank_account"
+msgstr	"You have an Armenian address."
+
+msgid	"project_edit_credit_debit_card"
+msgstr	"You ha."
+
+msgid	"project_edit_basic_project_title"
+msgstr	"This is your project’s ID. Make it look good."
+
+msgid	"project_edit_basic_project_sub"
+msgstr	"Choose your project’s name, duration and money goal. You will go into details later."
+
+msgid	"project_edit_meet_ur_project"
+msgstr	"Make it fun!"
+
+msgid	"project_edit_give_name_details"
+msgstr	"Your video is key to successfully funding a project. Be creative, recruit your friends, and above all make it personal."
+
+msgid	"project_edit_project_image"
+msgstr	"Project image"
+
+msgid	"project_edit_user_image"
+msgstr	"A picture of you"
+
+msgid	"project_edit_problem_with_javascript"
+msgstr	"You have a problem with javascript, please update your java runtime environment."
+
+msgid	"project_edit_project_title"
+msgstr	"Project title"
+
+msgid	"project_edit_project_title_description"
+msgstr	"Make the title easy to remember, specific and goal oriented. Avoid generic words like 'help', 'support', or 'fund'."
+
+msgid	"project_edit_support"
+msgstr	"support"
+
+msgid	"project_edit_fund"
+msgstr	"fund"
+
+msgid	"project_edit_help"
+msgstr	"ՕԳՆՈՒԹՅՈՒՆ"
+
+msgid	"project_edit_or"
+msgstr	"or"
+
+msgid	"project_edit_category"
+msgstr	"Category"
+
+msgid	"project_edit_category_description"
+msgstr	"This is the category your project belongs to."
+
+msgid	"project_edit_short_blurb"
+msgstr	"Short Description"
+
+msgid	"project_edit_short_blurb_word_limit"
+msgstr	"This is your pitch. What would you say if you had to describe your project in one tweet?"
+
+msgid	"project_edit_project_location"
+msgstr	"Project Location"
+
+msgid	"project_edit_project_location_description"
+msgstr	"Please choose a location for your project. Select the biggest city near you as backers sometimes browse only cities they know! If you need to, you can be more specific later in the Story tab!"
+
+msgid	"project_edit_funding_duration"
+msgstr	"Funding duration"
+
+msgid	"funding_duration_msg"
+msgstr	"Funding starts after your project is approved by Boostbloom. This usually takes less than 24 hours!"
+
+msgid	"project_edit_funding_duration_description"
+msgstr	"This is how long backers can back your project. Maximum is 28 days"
+
+msgid	"project_edit_no_days"
+msgstr	"Number of days"
+
+msgid	"project_edit_recommend_30"
+msgstr	"1−60 days, we recommend 30 or less"
+
+msgid	"project_edit_end_date_time"
+msgstr	"End on date & time"
+
+msgid	"project_edit_ur"
+msgstr	"Your"
+
+msgid	 "project_edit_is"
+msgstr	"is"
+
+msgid	"project_edit_funding_goal"
+msgstr	"Funding goal"
+
+msgid	"project_edit_how_to"
+msgstr	"How to:"
+
+msgid	"project_edit_awesome_project"
+msgstr	"Make an awesome project"
+
+msgid	"project_edit_next"
+msgstr	"Next"
+
+msgid	"project_edit_back"
+msgstr	"Back"
+
+msgid	"project_edit_submit"
+msgstr	"Submit"
+
+msgid	"project_edit_dave"
+msgstr	"Save"
+
+msgid	"project_edit_discard_changes"
+msgstr	"Discard Changes"
+
+msgid	"project_edit_exit"
+msgstr	"Exit"
+
+msgid	"project_edit_reward_title"
+msgstr	"Make it attractive with amazing rewards"
+
+msgid	"project_edit_reward_title_description"
+msgstr	"Rewards are what backers receive in exchange for pledging to your project.<br />Rewards must be creative and fairly priced. Projects with overpriced or uninspired <br />rewards have a hard time finding backers. But great rewards make great projects!"
+
+msgid	"project_edit_reward_pledge_amount"
+msgstr	"Pledge amount"
+
+msgid	"project_edit_reward_description"
+msgstr	"Description"
+
+msgid	"project_edit_reward_delivery_date"
+msgstr	"delivery date"
+
+msgid	"project_edit_reward_delete"
+msgstr	"Delete"
+
+msgid	"project_edit_reward_limit_available"
+msgstr	"Limit # available"
+
+msgid	"project_edit_reward_more"
+msgstr	"more"
+
+msgid	"project_edit_reward_what_offer"
+msgstr	"What to offer"
+
+msgid	"project_edit_reward_unique_experience_editions"
+msgstr	"Copies of what you're making, unique experiences, and limited editions work great."
+
+msgid	"project_edit_reward_how_to_price"
+msgstr	"How to price"
+
+msgid	"project_edit_reward_price_fairly_offer"
+msgstr	"Price fairly, offer value"
+
+msgid	"project_edit_reward_most_popular_reward"
+msgstr	"Most popular reward:"
+
+msgid	"project_edit_reward_always_good_idea"
+msgstr	"Something fun for %s or less is always a good idea"
+
+msgid	"project_edit_reward_shipping_cost_price"
+msgstr	"Budget shipping cost into the reward price"
+
+msgid	"project_edit_reward_international_backers_specified"
+msgstr	"You may need to create separate rewards for international backers, or ask them to add a specified amount to their pledges for the added costs"
+
+msgid	"project_edit_reward_prohibited"
+msgstr	"What's prohibited"
+
+msgid	"project_edit_reward_produced_project"
+msgstr	"Rewards not directly produced by the creator or the project itself"
+
+msgid	"project_edit_reward_incentives"
+msgstr	"Financial incentives"
+
+msgid	"project_edit_reward_raffles_lotteries_sweepstakes"
+msgstr	"Raffles, lotteries, and sweepstakes"
+
+msgid	"project_edit_reward_discounts_cash_value_gift"
+msgstr	"Coupons, discounts, and cash-value gift cards"
+
+msgid	"project_edit_reward_bulk_quantities"
+msgstr	"Rewards in bulk quantities (more than ten of an item)"
+
+msgid	"project_edit_project_video"
+msgstr	"Project Video"
+
+msgid	"project_edit_project_description"
+msgstr	"Project Description"
+
+msgid	"project_edit_important_reminder"
+msgstr	"Important reminder"
+
+msgid	"project_edit_story_reminder"
+msgstr	"Don't use music, images, video, or other content that you don't have the rights to. Reusing copyrighted material is almost always against the law and can lead to expensive lawsuits. The easiest way to avoid copyright troubles is to create all the content yourself or use content that is free for public use."
+
+msgid	"project_edit_aboutu_little_bit"
+msgstr	"Now a little bit more about you"
+
+msgid	"project_edit_aboutu_tell_ppl_who_ur"
+msgstr	"Tell people who you are! Supporting links are always nice."
+
+msgid	"project_edit_aboutu_faebook_connect"
+msgstr	"Facebook Connect"
+
+msgid	"project_edit_aboutu_location"
+msgstr	"Your Location"
+
+msgid	"project_edit_aboutu_faebook_connect_title"
+msgstr	"Build trust with potential backers by showing there's a real person behind the project. Your name and number of friends will be displayed."
+
+msgid	"project_edit_aboutu_connect_to_facebook"
+msgstr	"Connected to Facebook"
+
+msgid	"project_edit_aboutu_right_description_top"
+msgstr	"Getting backers to trust you is part of your job as a creator. Remember that potential backers do not personally know you. Earning their trust is the key that will bring your project to life. Tell who you really are, what your story is, talk about your achievements and share links that help reinforce them."
+
+msgid	"project_edit_aboutu_right_description_second"
+msgstr	"Launching another project? Awesome! For the sake of transparency, just be sure all of them are under the same account. In special circumstances where this won't work (this project’s a solo album, the last one was with your mariachi band) just be sure to link to any previous projects in your bio."
+
+msgid	"project_edit_aboutu_accountability"
+msgstr	"Important notes on accountability"
+
+msgid	"project_edit_aboutu_returning_creators"
+msgstr	"Returning creators"
+
+msgid	 "project_edit_account_housekeeping"
+msgstr	"Account"
+
+msgid	"project_edit_account_name_important_detail"
+msgstr	"We need to check your email and send you a verification link before your project starts."
+
+msgid	"project_edit_account_contact_details"
+msgstr	"Contact Details"
+
+msgid	"project_edit_account_email_verification"
+msgstr	"Email verification"
+
+msgid	"project_edit_account_need_verification"
+msgstr	"You need to verify"
+
+msgid	"project_edit_account_need_verification_detail"
+msgstr	"in order to create a project. Click the button below to send a verification email to yourself. Click the link in this email to verify your email address."
+
+msgid	"project_edit_account_email_verified"
+msgstr	"Your email has been verified."
+
+msgid	"project_edit_account_email_payapl"
+msgstr	"Paypal Email"
+
+msgid	"project_edit_account_check_box_detail"
+msgstr	"I understand that in order to launch, my project must meet the Project Guidelines and I must meet"
+
+msgid	"project_edit_back_this_project"
+msgstr	"Back this project"
+
+msgid	"project_final_review_checkbox"
+msgstr	"I have read these important reminders"
+
+msgid	"project_guidelines"
+msgstr	"Project Guidelines"
+
+msgid	"and_the"
+msgstr	"and the"
+
+######################################## get popular #######################################
+
+msgid	"project_getpopular_no_project_section"
+msgstr	"Currently projects are not available in this section."
+
+#getpopular end here 
+
+#project pledge start here 
+
+msgid	"project_pledger_alright"
+msgstr	"Alrighty"
+
+msgid	"project_pledger_enter_amount"
+msgstr	"Enter your pledge amount"
+
+msgid	"project_pledger_any_amount_of"
+msgstr	"It's up to you. Any amount of"
+
+msgid	"project_pledger_select_reward_ur"
+msgstr	"Select your reward"
+
+msgid	"project_pledger_no_reward"
+msgstr	"No Reward"
+
+msgid	"project_pledger_no_want_to_help_project"
+msgstr	"No thanks, I just want to help the project."
+
+msgid	"project_please_enter_limit_value"
+msgstr	"Please enter limit value"
+
+msgid	"project_please_enter_limit_interger"
+msgstr	"Please limit in integer."
+
+msgid	"project_add_more_reward"
+msgstr	"Reward"
+
+msgid	"about_pledger_amount"
+msgstr	"the total amount you’re pledging to this project is displayed"
+
+######################################## project stared #######################################
+
+msgid	"project_stared_email_to_update_project"
+msgstr	"Please Provide Your Email to receive updates on this project"
+
+msgid	"project_stared_checkout_payapl"
+msgstr	"Checkout With Paypal"
+
+msgid	"project_view_payment_detail"
+msgstr	"Selected Reward"
+
+msgid	"project_view_payment_edit"
+msgstr	"Edit"
+
+msgid	"project_view_payment_delete"
+msgstr	"Delete"
+
+msgid	"delete_faq_msg"
+msgstr	"Are you sure you want to delete this item."
+
+msgid	"project_backed_the_project_successfully"
+msgstr	"You have backed the project successfully."	
+
+######################################## project backer comment ####################################### 
+
+msgid	"project_backer_comment_below"
+msgstr	"Please enter comments below"
+
+#project backer comment end here 
+
+#project pladge cancel start here 
+
+msgid	"project_cancel_pledge_amount"
+msgstr	"Cancel Pledge Amount"
+ 
+######################################## project payment faq ####################################### 
+
+msgid	"project_payment_frequently_asked_question"
+msgstr	"Frequently Asked Questions"
+		
+msgid	"project_payment_responce_fulfilling_promises"
+msgstr	"Who is responsible for fulfilling the promises of this project?"
+		
+msgid	"project_payment_right_rule_third"
+msgstr	"%s does not investigate a creator's ability to complete their project. The claims and responsibilities of this project are solely its creator's. "	
+	
+msgid	"project_payment_right_rule_fourth"
+msgstr	"When is my credit account charged?"
+	
+msgid	"project_payment_right_rule_fifth"
+msgstr	"If this project is successfully funded, your account will be charged on %s, along with all the other backers of this project. "	
+
+msgid	"project_payment_right_rule_sixth"
+msgstr	"So I'm only charged if funding succeeds?"
+
+msgid	"project_payment_right_rule_Seventh"
+msgstr	"Yes! That's part of what makes %s special. If a project isn't successfully funded, no one pays anything."
+
+msgid	"project_payment_right_rule_eight"
+msgstr	"What if I want to change my pledge?"
+
+msgid	"project_payment_right_rule_ninth"
+msgstr	"You can change or cancel your pledge anytime before %s"
+
+msgid	"project_payment_right_rule_tenth"
+msgstr	"If this project is funded, how do I get my reward?"
+
+msgid	"project_payment_right_rule_eleventh"
+msgstr	"When your reward is ready, %s will send you a survey via email to request any info needed to deliver your reward (mailing address, T-shirt size, etc)."
+
+msgid	"project_payment_please_select_reward"
+msgstr	"Please select reward."
+
+msgid	"project_start_your_project"
+msgstr	"Start Your Project"
+########################################get secial right panel ####################################### 
+
+msgid	"get_social_right_pannel"
+msgstr	"Find & Browse"
+
+msgid	"get_social_right_pannel_manage"
+msgstr	"Manage & Browse"
+
+msgid	"get_social_right_pannel_following"
+msgstr	"Following"
+
+msgid	 "get_social_right_pannel_followers"
+msgstr	"Followers"
+
+msgid	"get_social_right_pannel_blocked"
+msgstr	"Blocked"
+
+########################################category project##############################################################################
+
+msgid	"category_project_empty_msg"
+msgstr	"There is no project in this category"
+
+msgid	"category_project_share_post"
+msgstr	"Share this post"
+
+msgid	 "category_project_recent_post"
+msgstr	"Recent posts"
+
+msgid	"category_project_browse_cat"
+msgstr	"Browse categories"
+
+######################################## check password #######################################
+
+msgid	"check_password_enter_password"
+msgstr	"Enter Your Password"
+
+msgid	"check_password_current_password"
+msgstr	"Enter your current password to save these changes."
+
+msgid	"check_password_password"
+msgstr	"password"
+
+msgid	"check_password_enter_right_password"
+msgstr	"Please enter correct password."
+
+######################################## search post ##############################################################################
+
+msgid	"search_post_for"
+msgstr	"Searched for"
+
+msgid	"search_post_faq_found"
+msgstr	"FAQ's found"
+
+msgid	"search_post_empty_search"
+msgstr	"There is no post with this title"
+
+######################################## message ##############################################################################
+
+msgid	"message_title"
+msgstr	"Ask a question about: "
+
+msgid	"message_to"
+msgstr	"to"
+
+msgid	"message_message_tile"
+msgstr	"Message"
+
+msgid	"message_replies"
+msgstr	"Replies"
+
+msgid	"message_no_message_found"
+msgstr	"Sorry! No messages found."
+
+msgid	"message_read_more"
+msgstr	"Read More"
+
+msgid	"message_tab_tile"
+msgstr	"Ask a question to the creator"
+
+msgid	"message_send_message_to_poster"
+msgstr	"Send a message to the creator"
+
+msgid	"message_send_message_by"
+msgstr	"Message sent by"
+
+msgid	"message_no_message_in_this_thred"
+msgstr	"Sorry! no message found in this thread."
+
+msgid	"message_funding_end"
+msgstr	"Funding ends"
+
+msgid	"message_send_message"
+msgstr	"SEND MESSAGE"
+
+msgid	"message_send_message_reply"
+msgstr	"Reply"
+
+######################################## project report project ###########################################################################
+
+msgid	"project_report_this_project_to"
+msgstr	"Report this project to Boostbloom."
+
+msgid	"project_report_reason"
+msgstr	"Reason"
+
+msgid	"project_report_suggest_category"
+msgstr	"Suggest a category"
+########################################project updates model ##########################################################################
+
+msgid	"model_update_please_enter_title"
+msgstr	"Please enter title"
+
+msgid	"model_update_please_enter_description"
+msgstr	"Please enter description"
+ 
+######################################## project updates comment model ####################################### 
+
+msgid	"model_updatecomment_please_enter_comment"
+msgstr	"Please enter comment"
+
+ 
+######################################## project ask question model ####################################### 
+
+msgid	"model_askquestion_please_enter_question"
+msgstr	"Please enter comment"
+
+msgid	"model_askquestion_please_enter_answer"
+msgstr	"Please enter answer"
+
+ 
+######################################## project model ##########################################################################
+
+msgid	"model_project_project_title_require"
+msgstr	"Project title is required"
+
+msgid	"model_project_category_require"
+msgstr	"Category is required"
+
+msgid	"model_project_short_blurb_require"
+msgstr	"Short description is required"
+
+msgid	"model_project_location_is_require"
+msgstr	"Project location is required"
+
+msgid	"model_project_date_less_30_days"
+msgstr	"Project end date should be less than 29 days"
+
+msgid	"model_project_days_should_less_30_days"
+msgstr	"Number of days should be greater than 1 and less than 29"
+
+msgid	"model_project_funding_should_garter_0"
+msgstr	"Funding goal should be an integer (no comma or dot) greater than 0"
+
+msgid	"model_project_funding_should_integer"
+msgstr	"Funding goal should be integer value"
+
+msgid	"model_project_enter_project_description"
+msgstr	"Please enter Project Description"
+
+msgid	"model_project_please_enter_email"
+msgstr	"Please enter your email"
+
+msgid	"model_project_please_upload_image"
+msgstr	"Please Upload Image"
+
+msgid	"model_project_pledge_amount_must_number"
+msgstr	"Pledge amount must be a numeric value"
+
+msgid	"model_project_pledge_amount_must_number_1_10000"
+msgstr	"Pledge amount should be an integer (no comma or dot) from 1 to 10000"
+
+msgid	"model_project_description_is_required"
+msgstr 	"Description is required"
+
+msgid	"model_project_delivery_month_required"
+msgstr	"Delivery month is required"
+
+msgid	"model_project_delivery_year_required"
+msgstr	"Delivery Year is required"
+
+msgid	"backer_project_valid_pledge_amount"
+msgstr	"Please enter valid pledge amount."
+
+msgid	"backer_project_pledge_amount"
+msgstr	"Please enter pledge amount."
+
+msgid	"backer_project_pledge_amount_should_grater_0"
+msgstr	"Backing amount should be greater than 0"
+
+msgid	"backer_project_pledge_amount_should_integer_grater_0"
+msgstr	"Backing amount should be an integer (no comma or dot) greater than 0"
+
+msgid	"backer_project_pledge_amount_should_not_allow_comma"
+msgstr	"Comma (,) is not allowed in backing amount"
+
+######################################## static link page #######################################
+
+msgid	"page_empty_msg"
+msgstr	"There is no content in this page, we are coming soon with this page."
+
+########################################find friend starts here#######################################
+
+msgid	"find_friend_get_social"
+msgstr	"Get Social"
+
+msgid	"find_friend_follow_friend_discover_project"
+msgstr	"Follow your friends and discover great projects."
+
+msgid	"find_friend_project"
+msgstr	"Project(s)"
+
+msgid	"find_friend_no_friend_found"
+msgstr	"We couldn't find any friends on"
+
+msgid	"find_friend_unfollow"
+msgstr	"Unfollow"
+
+msgid	"find_friend_follow"
+msgstr	"Follow"
+
+msgid	"find_friend_find_friend"
+msgstr	"Find Friends"
+
+msgid	"find_friend_brows_projects"
+msgstr	"Browse Projects"
+
+msgid	"find_friend_do_not_want_to_follow_u"
+msgstr	"Don't want people to follow you?"
+
+msgid	"find_friend_pot_out_the_feature_entirely"
+msgstr	"Opt out of the feature entirely"
+
+msgid	"find_friend_find"
+msgstr	"Find"
+########################################friend project #######################################
+
+msgid	"friend_project_no_one_backed_project_u_follow"
+msgstr	"No one you follow has backed any projects."
+
+########################################follow friend #######################################
+
+msgid	"follow_u_r_not_following_any_one"
+msgstr	"You're not following anyone yet"
+
+msgid	"follow_projects"
+msgstr	"projects"
+
+########################################follower #######################################
+ 
+msgid	"follow_block"
+msgstr	"Block?"
+
+########################################blocked #######################################
+ 
+msgid	"blocked_no_one_blocked_by_u"
+msgstr	"You have not blocked any users from following you."
+
+########################################opt out pop up ##########################################################################
+ 
+msgid	"opt_out_follow_feature"
+msgstr	"of follow feature"
+ 
+msgid	"opt_out_u_would_not_able_follow_anyone"
+msgstr	"You Would not be able to follow anyone."
+
+msgid	"opt_out_no_one_can_follow_u"
+msgstr	"No one can follow you."
+
+msgid	"opt_out_account_disconnect_any_current_friend"
+msgstr	"Your account will be disconnected from any current friends."
+
+########################################opt out ##############################################################################
+
+msgid	"opt_out_have_not_opted_out_following"
+msgstr	"You’ve opted out of following."
+
+msgid	"opt_out_u_and_no_one_can_follow_each_other_if_mistake"
+msgstr	"No one can follow you and you can’t follow anyone. If this was a mistake, you can"
+
+msgid	"opt_out_back_in"
+msgstr	"back in"
+
+msgid	"opt_out_personalized_browsing"
+msgstr	"Personalized Browsing"
+
+msgid	"opt_out_personalized_browsing_colom"
+msgstr	"When you visit a project, you’ll be able to see if your friends are backers. Likewise, friends who follow you can see what you’re supporting!"
+
+msgid	"opt_out_email_notification"
+msgstr	"Email Notifications"
+
+msgid	"opt_out_email_notification_colom"
+msgstr	"We’ll send you an email when one of your friends backs or launches a project. If emails ever get too noisy, you can easily unsubscribe."
+
+msgid	"opt_out_pledge_privacy"
+msgstr	"Pledge Privacy"
+
+msgid	"opt_out_pledge_privacy_colom"
+msgstr	"We never disclose the amount you or your friends pledge, just that you’re proud backers."
+
+########################################get social ##############################################################################
+
+msgid	"get_social_connect_favebook"
+msgstr	"Connect with facebook"
+
+########################################index page ##############################################################################
+
+msgid	"index_discover_great_project_fb_section"
+msgstr	"Discover great projects"
+
+msgid	"index_with_ur_friend"
+msgstr	"with your friends"
+
+msgid	"index_see_how_it_work"
+msgstr	"See how it works"
+
+msgid	"index_what_to_learn_more"
+msgstr	"What to learn more"
+
+msgid	"index_no_one_u_follow_backed_launched_project"
+msgstr	"No one you follow has backed or launched any projects yet. When they do you'll see their projects here!"
+
+########################################success & unsuccess bar#############################################################################
+
+msgid "cont_successful"
+msgstr "Successful"
+
+msgid "cont_funding_unsuccessful"
+msgstr "Funding Unsuccessful"
+
+######################################## BoostBloom Help#######################################
+
+msgid "school_best_practices"
+msgstr "Best Practices"
+
+msgid "boostbloom_school"
+msgstr "Best practices"
+
+########################################user activity####################################### 
+
+msgid "backed_a_project"
+msgstr "backed a project"
+
+msgid "created_a_project"
+msgstr "launched a project"
+
+########################################user activity end############################################################################## 
+
+msgid "video_upload_instructions"
+msgstr "Maximum upload video file size is 1GB.<br />Only 'wmv', 'avi', 'mpeg', 'mpg', 'mp4', 'mov' and 'flv' files are allowed."
+
+msgid "project_edit_project_image_description"
+msgstr "Maximum upload image file size is 10 MB.<br />Only 'jpg','png','jpeg' and 'gif' files are allowed."
+
+msgid "project_deleted_successfully"
+msgstr "Project %s deleted successfully."
+
+msgid	"project_edit"
+msgstr	"Edit Project"
+
+msgid	"cancel_funding"
+msgstr	"Cancel Funding"
+
+msgid	"copylink"
+msgstr	"Copy Link"
+
+msgid	"stared_project_removed_successfully"
+msgstr	"Starred Project Removed successfully."	
+
+msgid	"is_following"
+msgstr	"is now following you!"	
+
+msgid	"comment_blog_post"
+msgstr	"commented on blog post."	
+
+msgid	"comment_on_project"
+msgstr	"commented on project."	
+
+msgid	"unsubscribed"
+msgstr	"You are successfully removed from reminder list."	
+
+######################################## To Display what is editable and not ####################################### 
+
+msgid	"info_editable_when_project_live"
+msgstr	"When your project is live, you can edit:"
+
+msgid	"info_proj_desc"
+msgstr	"Project description"
+
+msgid	"info_video_image"
+msgstr	"Video and image"
+
+msgid	"info_reward_edit"
+msgstr	"Rewards (add new ones or edit those not yet backed)"
+
+msgid	"info_your_profile"
+msgstr	"Your profile"
+
+msgid	"info_your_project_faq"
+msgstr	"Your Project FAQ"
+
+msgid	"info_not_editable_when_project_live"
+msgstr	"The only things that cannot be edited after launch are:"
+
+msgid	"info_not_editable_funding_goal"
+msgstr	"the funding goal"
+
+msgid	"info_not_editable_rewards"
+msgstr	"rewards that have already been selected by a backer"
+
+########################################notifications #######################################
+
+msgid    "notification_update_posted"
+msgstr	 "posted update for project"
+
+msgid	"notification_project_owner"
+msgstr	"backed your project"
+
+msgid	 "notification_comment_project_owner"
+msgstr	 "commented on your project"
+
+msgid 	"report_as_spam"
+msgstr 	"Thank you"
+
+msgid	 "report_spam"
+msgstr	 "Report as spam"
+
+msgid	 "report_this_message"
+msgstr	"Report this message to %s"
+
+msgid	"reported_spam"
+msgstr	"This message has been reported as spam"
+
+msgid	"follow_link"
+msgstr	"To reply to this message, follow this link:"
+
+msgid	"share_your_profile"
+msgstr	"Share your profile"
+
+msgid	"edit_your_profile"
+msgstr	"Edit your profile"
+
+msgid	"backed"
+msgstr	"Backed"
+
+msgid	"created"
+msgstr	"Created"
+
+msgid	"projects"
+msgstr	"Projects"
+
+msgid	"Comments"
+msgstr	"Comments"
+
+msgid	"from_the_project"
+msgstr	"from the project"
+
+msgid	"There_is_no_comments"
+msgstr	"There is no comment"
+
+##############################################################################################################
+
+msgid	"project_description_label"
+msgstr	"Use your project description to tell why you are raising funds. Be genuine and keep it mind that it’s up to you to show how good your project is!"
+
+msgid	"launch_project_now"
+msgstr	"Launch Project Now"
+
+msgid	"project_under_review"
+msgstr	"Your project \"%s\"has been submitted to %s for approval.<br />You will be able to make some modifications after your project is approved; this should not take long!"
+
+msgid	"thank_for_patience"
+msgstr	"Thank you for your patience."
+
+msgid	"would_you_like"
+msgstr	"Would you like to:"
+
+msgid	"go_back"
+msgstr	"Go Back"
+
+msgid	"go_to_home_page"
+msgstr	"Go to Home Page"
+
+######################################## Cancel Funding##############################################################################
+
+msgid	"cancel_project"
+msgstr	"Cancel Project"
+
+msgid	"project_r_u_sure_to_cancel"
+msgstr	"Are you sure you want to cancel your <strong>%s</strong> project? This action cannot be undone and will send a request to %s for immediate cancellation. All funding will be cancelled and your project will not appear on %s pages.Please make sure that this is what you want to do as this action cannot be undone."
+
+msgid	"project_delete_password_confirmation"
+msgstr	"password for confirmation:"
+
+msgid	"all_funding_canceled"
+msgstr	"All funding regarding this project will be cancelled immediately."
+
+msgid "project_cancel_request_sent"
+msgstr "Project cancellation request for project %s has been sent to site Admin."
+
+################################ Project Cancellation ##############################################################
+
+msgid "project_cancelled"
+msgstr "We apologize but Project %s has been cancelled by project creator."
+
+msgid "frnt_cancelled"
+msgstr "Cancelled"
+
+msgid "frnt_project_cancelled"
+msgstr "Project Cancelled"
+
+msgid "account_delete_message"
+msgstr "Your account was deleted. Please contact us to reactivate it."
+
+########################################Account deletion########################################################################
+
+msgid	"account_r_u_sure_to_delete"
+msgstr	"Are you sure you want to delete your account? If you are backing a project, you need to cancel your pledge(s) first or you will remain responsible for fulfilling them."
+
+msgid	"account_if_you_launch"
+msgstr	"If you launched a project, all funding will be cancelled and your project will not appear on %s pages. Please make sure this is what you want to do as this action cannot be undone."
+
+msgid	"user_account_deactivated"
+msgstr	"This account has been deactivated."
+
+msgid	"editor_image_upload"
+msgstr	"Image uploaded successfully"
+
+msgid	"editor_image_size_validation"
+msgstr	"Your image is too large, size limit is 10Mb"
+
+msgid	"editor_image_type_validation"
+msgstr	"Please only use jpeg, png, gif and bmp files, no bigger than 10Mb!"
+
+msgid	"editor_audio_upload"
+msgstr	"Audio successfully uploaded"
+
+msgid	"editor_audio_type_validation"
+msgstr	"Please only use mp3 file!"
+
+msgid	"cancelled_projects"
+msgstr	"Project Cancel Request"
+
+msgid	"cancel_projects"
+msgstr	"Project cancel"
+
+msgid	"Please_choose_one_project_for_cancel"
+msgstr	"Please choose one project for cancel"
+
+msgid	"image_ratio"
+msgstr	"For your pictures to appear bigger, please use a ratio of 4/3 (for instance 1600x1200 pixels)"
+
+msgid	"project_rejected"
+msgstr	"Not approved"
+
+msgid	"friends"
+msgstr	"Friends"
+
+msgid	"i_have_backed"
+msgstr	"I've Backed"
+
+msgid	"projects_on"
+msgstr	"projects on"
+
+########################## Style Guide ##############################################################################
+
+msgid	"Style_Guide_Title"
+msgstr	"STYLE GUIDE"
+
+msgid	"Style_Guide_Color"
+msgstr	"COLORS"
+
+msgid	"Style_Guide_Badges"
+msgstr	"BADGES"
+
+msgid	"Style_Guide_Heading_Text"
+msgstr	"Here you can find what you need to add our logo to your videos or images."
+
+msgid	"Style_Guide_Downlaod"
+msgstr	"Download high-resolution versions of the Boostbloom logo and other assets."
+
+msgid	"Style_Guide_Rules"
+msgstr	"In order to use the material below please make sure that you:"
+
+msgid	"Style_Guide_Product"
+msgstr	"don't use these images in a way that gives the impression that Boostbloom makes or endorses a product or an item"
+
+msgid	"Style_Guide_Website"
+msgstr	"don't use these images in a way that gives the impression that Boostbloom runs or endorses a website"
+
+msgid	"Style_Guide_Strict"
+msgstr	"don't change the design or colour of these images"
+
+msgid	"Png"
+msgstr	"PNG"
+
+msgid	"Bit_Map"
+msgstr	"bitmap"
+
+msgid	"Eps"
+msgstr	"EPS"
+
+msgid	"Vector"
+msgstr	"vector"
+
+msgid	"CMYK"
+msgstr	"CMYK"
+
+msgid	"Hex"
+msgstr	"Hex"
+
+msgid	"RGB"
+msgstr	"RGB"
+
+msgid	"PMS"
+msgstr	"PMS"
+
+############################################################################################################################
