@@ -746,5 +746,81 @@ class CronsController extends AppController
         }
     }
 
+	public function send_successfull_mail_project()
+	{
+		$currentTime = time();
+		$successProjects = $this->Project->find('all', array(
+				'conditions' => array(
+					'sent_mail' => 0,
+					//'is_successful' => 1,
+					'project_success_date <=' => time(),
+				)
+		));
+		//debug($successProjects); exit;
+		foreach ($successProjects as $successProject) {
+			if($successProject['Project']['is_successful']) {
+				$this->send_successfull_mail_to_owner($successProject['User']['email'], $successProject['User']['name'], $successProject['Project']['title']);
+				foreach ($successProject['Backer'] as $backer) {
+					//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
+					$backerUser = $this->User->findById($backer['user_id']));
+					$this->send_successfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['name'], $successProject['Project']['title']);
+				}
+			} else {
+				$this->send_unsuccessfull_mail_to_owner($successProject['User']['email'], $successProject['User']['name'], $successProject['Project']['title']);
+				foreach ($successProject['Backer'] as $backer) {
+					//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
+					$backerUser = $this->User->findById($backer['user_id']));
+					$this->send_unsuccessfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['name'], $successProject['Project']['title']);
+				}
+			}
+		}
+	}
+	
+	public function send_successfull_mail_to_owner($email, $name, $projectname)
+	{
+		$to = $email;
+		$subject = "Project " . $projectname . " was funded";
+		$this->set("ownername", $name);
+		$this->set("projectname", $projectname);
+		$element = "send_successfull_mail_to_owner";
+		$replyTo = "";
+		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+	}
+	
+	public function send_unsuccessfull_mail_to_owner($email, $name, $projectname)
+	{
+		$to = $email;
+		$subject = "Project " . $projectname . " was not funded";
+		$this->set("ownername", $name);
+		$this->set("projectname", $projectname);
+		$element = "send_unsuccessfull_mail_to_owner";
+		$replyTo = "";
+		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+	}
+	
+	public function send_successfull_mail_to_backers($email, $name, $projectname)
+	{
+		$to = $email;
+		$subject = "Project " . $projectname . " was funded";
+		$this->set("ownername", $name);
+		$this->set("projectname", $projectname);
+		$element = "send_successfull_mail_to_backers";
+		$replyTo = "";
+		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+	}
+	
+	public function send_unsuccessfull_mail_to_backers($email, $name, $projectname)
+	{
+		$to = $email;
+		$subject = "Project " . $projectname . " was not funded";
+		$this->set("ownername", $name);
+		$this->set("projectname", $projectname);
+		$element = "send_unsuccessfull_mail_to_backers";
+		$replyTo = "";
+		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+	}
 }
-
