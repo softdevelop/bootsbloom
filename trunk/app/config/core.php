@@ -351,3 +351,12 @@ switch($env_name)
     Configure::write('Config.language', 'eng');
     ini_set("memory_limit","200M");
     ini_set('session.gc_maxlifetime', '12000');
+
+    if($_SERVER['SERVER_NAME'] == 'localhost') 
+    {
+		Configure::write('Cache.disable', true);
+	}
+	else
+	{
+		Configure::write('Cache.disable', false);
+	}
