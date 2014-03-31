@@ -12,7 +12,7 @@ class CronsController extends AppController
         "Project", "Pages.Page", "Users.User", "Categories.Category", 
         "Reward", "Country", "StaredProject", "Backer", "PaymentLog", 
         "ProjectComment", "ProjectUpdate", "ProjectAskedQuestions", 
-        "Emaillog", "UserActivity", "Rewards", "ProjectTransaction", "UserFollow" );
+        "Emaillog", "UserActivity", "Rewards", "ProjectTransaction", "UserFollow", "Notification" );
 
     public $layout = false;
     
@@ -745,39 +745,52 @@ class CronsController extends AppController
 
         }
     }
-
+	public function projectinfor($project_id) {
+		$project = $this->Project->findById($project_id);
+		debug($project); exit;
+	}
 	public function send_successfull_mail_project()
 	{
 		$currentTime = time();
+		$arrDate = getdate($currentTime);
+		$startCurrDate = $currentTime - $arrDate['seconds'] - $arrDate['minutes']*60 - $arrDate['hours']*3600;
+		$endCurrDate = $startCurrDate + 24*3600;
 		$successProjects = $this->Project->find('all', array(
 				'conditions' => array(
-					'sent_mail' => 0,
+					//'sent_mail' => 0,
 					//'is_successful' => 1,
 					'project_success_date <=' => time(),
+					//'project_success_date <=' => $startCurrDate,
+					'project_success_date >=' => $endCurrDate,
+					"Project.submitted_status" => 1,
+					"Project.active" => 1, 
+					"Project.is_cancelled" => 0
 				)
 		));
 		//debug($successProjects); exit;
 		foreach ($successProjects as $successProject) {
 			if($successProject['Project']['is_successful']) {
-				$this->send_successfull_mail_to_owner($successProject['User']['email'], $successProject['User']['name'], $successProject['Project']['title']);
+				$this->send_successfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				foreach ($successProject['Backer'] as $backer) {
 					//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
-					$backerUser = $this->User->findById($backer['user_id']));
-					$this->send_successfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['name'], $successProject['Project']['title']);
+					$backerUser = $this->User->findById($backer['user_id']);
+					$this->send_successfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['id'], $backerUser['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				}
 			} else {
-				$this->send_unsuccessfull_mail_to_owner($successProject['User']['email'], $successProject['User']['name'], $successProject['Project']['title']);
+				$this->send_unsuccessfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				foreach ($successProject['Backer'] as $backer) {
 					//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
-					$backerUser = $this->User->findById($backer['user_id']));
-					$this->send_unsuccessfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['name'], $successProject['Project']['title']);
+					$backerUser = $this->User->findById($backer['user_id']);
+					$this->send_unsuccessfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['id'], $backerUser['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				}
 			}
 		}
+		exit('ok');
 	}
 	
-	public function send_successfull_mail_to_owner($email, $name, $projectname)
+	public function send_successfull_mail_to_owner($email, $user_id, $name, $projectid, $projectname)
 	{
+		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was funded";
 		$this->set("ownername", $name);
@@ -788,8 +801,9 @@ class CronsController extends AppController
 		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
 	}
 	
-	public function send_unsuccessfull_mail_to_owner($email, $name, $projectname)
+	public function send_unsuccessfull_mail_to_owner($email, $user_id, $name, $projectid, $projectname)
 	{
+		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was not funded";
 		$this->set("ownername", $name);
@@ -800,8 +814,9 @@ class CronsController extends AppController
 		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
 	}
 	
-	public function send_successfull_mail_to_backers($email, $name, $projectname)
+	public function send_successfull_mail_to_backers($email, $user_id, $name, $projectid, $projectname)
 	{
+		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was funded";
 		$this->set("ownername", $name);
@@ -812,8 +827,9 @@ class CronsController extends AppController
 		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
 	}
 	
-	public function send_unsuccessfull_mail_to_backers($email, $name, $projectname)
+	public function send_unsuccessfull_mail_to_backers($email, $user_id, $name, $projectid, $projectname)
 	{
+		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was not funded";
 		$this->set("ownername", $name);
@@ -823,4 +839,53 @@ class CronsController extends AppController
 		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
 		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
 	}
+	
+	public function send_ending_projects()
+	{
+		$currentTime = time();
+		$arrDate = getdate($currentTime);
+		//$nextTwoDate = strtotime("+48 hours", time());
+		$startCurrHour = $currentTime - $arrDate['seconds'] - $arrDate['minutes']*60;
+		$nextTwoDateStart = $startCurrHour + 48*60*60;
+		$nextTwoDateEnd = $startCurrHour + 49*60*60;
+		//$dateCurrDate = $startCurrDate + 48*3600;
+		$ending_soon_projects = $this->Project->find('all', array(
+				'conditions' => array(
+					//'sent_mail' => 0,
+					//'is_successful' => 1,
+					'project_success_date <=' => $nextTwoDateStart,
+					'project_success_date >=' => $nextTwoDateEnd,
+				)
+		));	
+		foreach ($ending_soon_projects as $ending_soon_project) {
+			$this->send_ending_mail_project($ending_soon_project['User']['email'], $ending_soon_project['User']['id'], $ending_soon_project['User']['name'], $ending_soon_project['Project']['id'], $ending_soon_project['Project']['title']);
+			
+			$email_temp["project_link"] = Router::url(array( "plugin" => false, "controller" => "projects", "action" => "detail" ), true) . "/" . $ending_soon_project["User"]["slug"] . "/" . $ending_soon_project["Project"]["slug"];
+            $email_temp["user_link"] = Router::url(array( "plugin" => "users", "controller" => "users", "action" => "profile", "slug" => $ending_soon_project["User"]["slug"] ), true);
+            $email_temp["category_link"] = Router::url(array( "plugin" => false, "controller" => "projects", "action" => "category_projects", $ending_soon_project["Category"]["slug"] ), true);
+			$view->set("ending_soon_project", $ending_soon_project);
+            $view->set("email_temp", $email_temp);
+			$this->Notification->create_noti($user_id, 'project_ending_soon', $ending_soon_project['Project']['id']);
+			$to = $ending_soon_project;
+			$subject = "Project " . $projectname . " will ending in 48 hours next";
+			$element = "ending_soon_notification";
+			$replyTo = "";
+			$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+		}
+	}
+	/*
+	public function send_ending_mail_project($email, $user_id, $name, $projectid, $projectname)
+	{
+		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
+		$to = $email;
+		$subject = "Project " . $projectname . " was not funded";
+		$this->set("ownername", $name);
+		$this->set("projectname", $projectname);
+		$element = "send_unsuccessfull_mail_to_backers";
+		$replyTo = "";
+		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+	}
+	*/
 }

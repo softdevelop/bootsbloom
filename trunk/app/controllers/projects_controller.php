@@ -454,12 +454,29 @@ class ProjectsController extends AppController
         $this->Project->id = $id;
 		$this->Project->saveField("is_cancelled", "1");
 		$this->Backer->updateAll(array( "Backer.is_cancelled" => "1" ), array( "Backer.project_id" => $id ));
+	
+		/*Send mail*/
+		$project = $this->Project->findById($id);
+		$this->Notification->create_noti($project['User']['id'], 'project_cancelled', $project_id);
+		
+		$this->set("project", $project);
+		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+		$element = "project_cancellation_to_creator";
+		$replyTo = "";
+		$to = $project["User"]["email"];
+		$subject = "Cancellation notification for " . $project["Project"]["title"];
+		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+			
         $backers = $this->Backer->findAllByProjectId((int)$id);
-        
         // create notification for backers
         foreach($backers as $key => $backer)
         {
             $this->Notification->create_noti($backer['User']['id'], 'project_cancelled', $backer['Project']['id']);
+			$backer = $this->User->findById($backer['user_id']);
+			$to = $backer["User"]["email"];
+			$this->set("backer", $backer);
+			$element = "project_cancellation_to_backer";
+			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
         }
 		$this->Session->setFlash(__d("projects", "Project and all pledges regarding this project has been cancelled.", true), "admin/success");
         $this->redirect($this->referer());
