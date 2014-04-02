@@ -771,6 +771,21 @@ class CronsController extends AppController
 		foreach ($successProjects as $successProject) {
 			if($successProject['Project']['is_successful']) {
 				$this->send_successfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
+				
+				$backer_list = array();
+				foreach( $successProject["Backer"] as $backer ) 
+				{
+					$backer_list[] = array( "name" => $backerInfo["User"]["name"], "email" => $backerInfo["User"]["email"] );
+				}
+				$to = $successProject["User"]["email"];
+				$subject = "Backers List for project " . $successProject["Project"]["title"];
+				$this->set("backer_list", $backer_list);
+				$this->set("project_info", $successProject);
+				$element = "send_backers_email_list";
+				$replyTo = "";
+				$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+				$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+				
 				foreach ($successProject['Backer'] as $backer) {
 					//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
 					$backerUser = $this->User->findById($backer['user_id']);
@@ -873,6 +888,7 @@ class CronsController extends AppController
 			$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
 			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
 		}
+		exit('ok');
 	}
 	/*
 	public function send_ending_mail_project($email, $user_id, $name, $projectid, $projectname)

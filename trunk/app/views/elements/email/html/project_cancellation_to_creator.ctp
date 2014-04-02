@@ -24,21 +24,12 @@
                     </tr>
                     <tr>
                         <td>
-                            Unfortunately, project “<?php echo $project['Project']['title']; ?>” has been cancelled by its creator.
+                            Unfortunately, your project “<?php echo $project['Project']['title']; ?>” has been cancelled by admin.
                         </td>
                     </tr>
                     <tr>
                         <td>
                             We place tremendous effort to limit such actions but we can’t totally prevent them. 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Your pledge has been automatically cancelled. No money was taken from your account.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>  We hope you will find other exciting projects to support.
                         </td>
                     </tr>
                     <tr>

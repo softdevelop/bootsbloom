@@ -467,14 +467,16 @@ class ProjectsController extends AppController
 		$subject = "Cancellation notification for " . $project["Project"]["title"];
 		$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
 			
-        $backers = $this->Backer->findAllByProjectId((int)$id);
+        //$backers = $this->Backer->findAllByProjectId((int)$id);
         // create notification for backers
-        foreach($backers as $key => $backer)
+        //foreach($project['Backer'] as $key => $backer)
+        foreach($project['Backer'] as $backer)
         {
             $this->Notification->create_noti($backer['User']['id'], 'project_cancelled', $backer['Project']['id']);
 			$backer = $this->User->findById($backer['user_id']);
 			$to = $backer["User"]["email"];
 			$this->set("backer", $backer);
+			$this->set("project", $project);
 			$element = "project_cancellation_to_backer";
 			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
         }
@@ -1752,7 +1754,9 @@ class ProjectsController extends AppController
             exit();
         }
 
-        $project_info = $this->Project->find("first", array( "conditions" => array( "Project.id" => $project_id ), "fields" => array( "Project.project_preview_token", "User.slug", "Project.title", "Project.image", "Project.video", "Project.flv_file_name", "Project.video_image" ) ));
+        //$project_info = $this->Project->find("first", array( "conditions" => array( "Project.id" => $project_id ), "fields" => array( "Project.project_preview_token", "User.slug", "Project.title", "Project.image", "Project.video", "Project.flv_file_name", "Project.video_image" ) ));
+        //$project_info = $this->Project->find("first", array( "conditions" => array( "Project.id" => $project_id ) ));
+		$project_info = $this->Project->findById($project_id);
         if( $this->data ) 
         {
             if( $this->data["Project"]["password"] != $this->Session->read("Auth.User.password_token") ) 
@@ -1765,6 +1769,23 @@ class ProjectsController extends AppController
                 $this->Project->delete($project_id);
                 $this->Reward->deleteAll("Reward.project_id=" . $project_id);
                 $this->Session->write("project_success", 1);
+				
+				foreach($project_info['Backer'] as $backer)
+				{
+					$this->Notification->create_noti($backer['User']['id'], 'project_cancelled', $backer['Project']['id']);
+					
+					$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+					$replyTo = "";
+					$to = $project["User"]["email"];
+					$subject = "Cancellation notification for " . $project["Project"]["title"];
+					$backer = $this->User->findById($backer['user_id']);
+					$to = $backer["User"]["email"];
+					$this->set("backer", $backer);
+					$this->set("project", $project_info);
+					$element = "project_cancellation_to_backer_by_creator";
+					$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+				}
+				
                 if( empty($project_info["Project"]["title"]) ) 
                 {
                     $projetc_title = __("profile_untitle_project", true);
