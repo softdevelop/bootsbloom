@@ -80,7 +80,7 @@ msgstr "SIGN IN"
 msgid "frnt_sign_up"
 msgstr "SIGN UP"
 
-msgid "frnt_discover_grate_project"
+msgid "frnt_discover_grate_project_unsuccessful"
 msgstr "Discover great projects"
 
 msgid "frnt_project"
@@ -786,6 +786,9 @@ msgstr	"Project Launched"
 
 msgid	"project_unsuccessful"
 msgstr	"Project Unsuccessful"
+
+msgid	"project_successful"
+msgstr	"Project Successful"
 
 msgid	"launched"
 msgstr	"Launched"

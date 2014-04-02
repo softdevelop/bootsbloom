@@ -620,6 +620,9 @@ ul.user_tabs li a span{background:url(../../img/front/counterbg.jpg) repeat-x;-w
 .mt105{margin-top:95px;}
 .project-not-approved strong{background:none repeat scroll 0 0 #22D2C7;color:#333;text-shadow:0 1px 0 #FFF;border-radius:10px 10px 10px 10px;font-size:11px;font-weight:700;line-height:44px;text-transform:uppercase;margin-left:40px;padding:5px 10px;}
 .project-unsuccessful strong{background:none repeat scroll 0 0 #F6F604;color:#333;text-shadow:0 1px 0 #FFF;border-radius:10px 10px 10px 10px;font-size:11px;font-weight:700;line-height:44px;text-transform:uppercase;margin-left:40px;padding:5px 10px;}
+
+.project-successful strong{background:none repeat scroll 0 0 #F6F604;color:#333;text-shadow:0 1px 0 #FFF;border-radius:10px 10px 10px 10px;font-size:11px;font-weight:700;line-height:44px;text-transform:uppercase;margin-left:40px;padding:5px 10px;}
+
 .project-not-launched strong{background:none repeat scroll 0 0 #beeda7;color:#333;text-shadow:0 1px 0 #FFF;border-radius:10px 10px 10px 10px;font-size:11px;font-weight:700;line-height:44px;text-transform:uppercase;margin-left:40px;padding:5px 10px;}
 .project-launched strong{background:none repeat scroll 0 0 #52e960;color:#333;text-shadow:0 1px 0 #FFF;border-radius:10px 10px 10px 10px;font-size:11px;font-weight:700;line-height:44px;text-transform:uppercase;margin-left:40px;padding:5px 10px;}
 .badge-success{background-position:-390px -130px;height:100px;width:100px;}

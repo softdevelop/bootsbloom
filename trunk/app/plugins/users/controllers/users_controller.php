@@ -1192,7 +1192,7 @@ class UsersController extends UsersAppController {
     }
 
     function created_projects() {
-
+        
         $userInfo = $this->User->findBySlug($this->params['slug']);
 
 
@@ -1841,7 +1841,7 @@ class UsersController extends UsersAppController {
         $this->set('title_for_layout', __('delete_account', true));
         if ($this->data) 
         {
-            if (Security::hash($this->data['User']['password'], null, true) != $this->Session->read('Auth.User.password_token')) 
+            if ($this->data['User']['password'] != $this->Session->read('Auth.User.password_token')) 
             {
                 $this->set('invalid_password', '1');
             } 

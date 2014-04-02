@@ -388,12 +388,20 @@ if (count($projects) > 0) {
                                             <strong><?php __('frnt_project_cancelled'); ?></strong>
                                         </div>
                     <?php
-                    } else if ($project['Project']['project_end_date'] < time() || $project['Project']['is_successful'] == 0) {
+                    } else if ($project['Project']['project_end_date'] < time() && $total_pledge_amount <= $project['Project']['funding_goal']) {
                         ?>
                                         <div class="project-unsuccessful">
                                             <strong><?php __('project_unsuccessful'); ?></strong>
                                         </div>
+                        <?php 
+                            }
+                            else if($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal'])
+                            {
 
+                        ?>
+                                <div class="project-successful">
+                                        <strong><?php __('project_successful'); ?></strong>
+                                </div>
                                     <?php
                                     } else {
                                         ?>
