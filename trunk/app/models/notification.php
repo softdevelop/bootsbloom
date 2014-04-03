@@ -14,6 +14,7 @@ class Notification extends AppModel
      */
     public function create_noti($user_id, $notification_type = '', $subject_id, $subject_type = 'project', $friend_id = 0)
     {
+		$this->create();
         $this->set(array(
             'user_id' => $user_id,
             'notification_type' => $notification_type,

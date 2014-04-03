@@ -27,7 +27,8 @@ class ProjectsController extends AppController
 		"ProjectTransaction", 
 		"ProjectSurvey", 
 		"ProjectCancellationRequest", 
-        "Notification"
+        "Notification",
+		"Message"
 	);
     public $paginate = NULL;
     public $components = array( "RequestHandler" );
@@ -2425,6 +2426,38 @@ class ProjectsController extends AppController
                 $this->data["ProjectSurvey"]["project_id"] = $project_detail["Project"]["id"];
                 $this->data["ProjectSurvey"]["backers_count"] = count($project_detail["Backer"]);
                 $this->data["ProjectSurvey"]["owner_id"] = $project_detail["User"]["id"];
+				if($this->data["ProjectSurvey"]["reward_id"] == 0) {
+					$backers = $this->Backer->find('all', array('conditions' => array('Backer.project_id' => $project_detail["Project"]["id"])));
+				} else {
+					$backers = $this->Backer->find('all', array('conditions' => array(
+						'Backer.project_id' => $project_detail["Project"]["id"],
+						'Backer.reward_id'	=>	$this->data["ProjectSurvey"]["reward_id"]
+					)));
+				}
+				foreach($backers as $backer) {
+					$message["Message"]["from_user_id"] = $this->Session->read("Auth.User.id");
+					$message["Message"]["to_user_id"] = $backer["User"]["id"];
+					$message["Message"]["project_id"] = $backer["Project"]["id"];
+					$message["Message"]["message"] = $this->data["ProjectSurvey"]["survey_subject"]." \n\r".$this->data["ProjectSurvey"]["survey_message"];
+					$message["Message"]["is_read"] = 0;
+					$this->Message->create($message);
+					$this->Message->save($message);
+					
+					//$this->Notification->create();
+					$this->Notification->create_noti($backer["User"]["id"], 'project_reward_survey', $backer["Project"]["id"]);
+					$to = $backer["User"]["email"];
+					//$subject = "Project " . $projectname . " was project reward survey";
+					$subject = $this->data["ProjectSurvey"]["survey_subject"];
+					$this->set("ownername", $backer["User"]["name"]);
+					$this->set("surveyname", $backer["User"]["name"]);
+					$this->set("projectname", $backer["Project"]["title"]);
+					$this->set("surveymessage", $this->data["ProjectSurvey"]["survey_message"]);
+					$element = "send_project_reward_survey";
+					$replyTo = "";
+					$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+					$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+				}
+				
                 if( $this->ProjectSurvey->save($this->data, false) ) 
                 {
                     $this->Session->write("stared_project_session", true);

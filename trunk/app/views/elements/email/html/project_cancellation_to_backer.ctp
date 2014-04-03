@@ -19,12 +19,12 @@
                 <table class="content" >
                     <tr>
                         <td>
-                            Hi <?php echo ucfirst($backer['User']['name']) . ','; // Project Owner,   ?>
+                            Hi <?php echo ucfirst($backer['User']['name']) . ','; // Project Backer,   ?>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Unfortunately, project “<?php echo $backer['Project']['title']; ?>” has been cancelled by its creator.
+                            Unfortunately, project “<?php echo $project['Project']['title']; ?>” has been cancelled by admin.
                         </td>
                     </tr>
                     <tr>
