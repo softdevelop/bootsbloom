@@ -759,15 +759,17 @@ class CronsController extends AppController
 				'conditions' => array(
 					//'sent_mail' => 0,
 					//'is_successful' => 1,
-					'project_success_date <=' => time(),
-					//'project_success_date <=' => $startCurrDate,
-					'project_success_date >=' => $endCurrDate,
-					"Project.submitted_status" => 1,
+					//'project_success_date >=' => $endCurrDate,
+					//"Project.submitted_status" => 1,
+					//'project_success_date <=' => time(),
+					//'project_success_date >=' => $startCurrDate,
+					//'project_success_date <=' => time(),
+					'project_end_date <=' => $endCurrDate,
+					'project_end_date >=' => $startCurrDate,
 					"Project.active" => 1, 
 					"Project.is_cancelled" => 0
 				)
 		));
-		//debug($successProjects); exit;
 		foreach ($successProjects as $successProject) {
 			if($successProject['Project']['is_successful']) {
 				$this->send_successfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
@@ -847,7 +849,7 @@ class CronsController extends AppController
 		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was not funded";
-		$this->set("ownername", $name);
+		$this->set("backername", $name);
 		$this->set("projectname", $projectname);
 		$element = "send_unsuccessfull_mail_to_backers";
 		$replyTo = "";
@@ -868,8 +870,10 @@ class CronsController extends AppController
 				'conditions' => array(
 					//'sent_mail' => 0,
 					//'is_successful' => 1,
-					'project_success_date <=' => $nextTwoDateStart,
-					'project_success_date >=' => $nextTwoDateEnd,
+					//'project_success_date <=' => $nextTwoDateStart,
+					//'project_success_date >=' => $nextTwoDateEnd,
+					'project_end_date <=' => $nextTwoDateStart,
+					'project_end_date >=' => $nextTwoDateEnd,
 				)
 		));	
 		foreach ($ending_soon_projects as $ending_soon_project) {
