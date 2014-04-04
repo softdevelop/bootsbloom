@@ -1406,7 +1406,6 @@ class UsersController extends UsersAppController {
     }
 
     function backed_projects() {
-
         $userInfo = $this->User->findBySlug($this->params['slug']);
         if ($this->params['slug'] != $this->Session->read('Auth.User.slug')) {
             $this->set('title_for_layout', sprintf(__('user_backer_history', true), $userInfo['User']['name'] . "'s") . '&mdash; ' . Configure::read('CONFIG_SITE_TITLE'));
@@ -1423,7 +1422,7 @@ class UsersController extends UsersAppController {
             $this->set('project_success', $project_success);
             $this->set('project_success_msg', $project_success_msg);
         }
-        /*         * Get Projects for each category created by user* */
+        /** Get Projects for each category created by user **/
         $this->Project->virtualFields = array('project_count' => 'COUNT(`Project`.`id`)');
         $this->Project->unbindModel(array('hasMany' => array('Backer', 'Reward', 'ProjectAskedQuestion')));
         $userCategoryProjetsCount = $this->Project->find('all', array('fields' => array('Project.id', 'Project.project_count', 'Category.category_name'), 'conditions' => array('Project.user_id' => $userInfo['User']['id'], 'Project.active' => '1'), 'group' => 'Project.category_id'));
@@ -1513,12 +1512,14 @@ class UsersController extends UsersAppController {
     }
 
     function backed_history() {
+        
         $this->data['User'] = $this->Session->read('Auth.User');
         $this->params['slug'] = $this->data['User']['slug'];
 
         $country = $this->Country->find('first', array('conditions' => array('Country.iso3166_1' => $this->data['User']['country']), 'fields' => array('Country.name')));
         $this->data['User']['country'] = $country['Country']['name'];
         $result = $this->load_backed_history();
+        var_dump($result['result']);die('123');
         // to show notification
         if ($this->Session->check('project_success')) {
             $project_success = $this->Session->read('project_success');

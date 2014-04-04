@@ -1,16 +1,19 @@
 ﻿<?php
 if (count($projects) > 0) {
     foreach ($projects as $project) {
+        
+        
         $total_pledge_amount = 0;
-
+        
         if ($type == 'stared') {
             $total_pledge_amount = $this->GeneralFunctions->get_total_pledge_amount($project['Project']['Backer']);
             $user_image_url = $this->GeneralFunctions->get_user_profile_image_using_user_array($project['Project']['User'], '20px', '20px');
             ?>
 
             <div class="project_box">
-            <?php
-            if ($project['Project']['active'] == 1 && $project['Project']['is_cancelled'] == 1) { // for cancelled 
+                <?php
+                if (($project['Project']['active'] == 1 && $project['Project']['is_cancelled'] == 1)) { // for cancelled 
+
                 ?>
 
                     <div class="cancelled_ribbon">
@@ -23,8 +26,8 @@ if (count($projects) > 0) {
                         <div class="cancelled_ribbon_right"></div>
                     </div>
 
-            <?php
-            } else if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) { // for funded 
+                <?php
+                } else if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) {                       // for funded 
                 ?>
 
                     <div class="green_ribbon">
@@ -37,8 +40,8 @@ if (count($projects) > 0) {
                         <div class="yellow_right"></div>
                     </div>
 
-            <?php
-            } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running 
+                <?php
+                } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running 
                 ?>
 
                     <div class="green_ribbon">
@@ -50,7 +53,7 @@ if (count($projects) > 0) {
                         </div>
                         <div class="ribbon_right"></div>
                     </div>
-            <?php } ?>
+                <?php } ?>
 
                 <div class="box_top"></div>
                 <div class="clr"></div>
@@ -58,36 +61,44 @@ if (count($projects) > 0) {
                     <div class="mrgn_auto width90per">
                         <div class="fl pro_video">
 
-            <?php echo $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'], "210px", "280px"), array('height' => 210, 'width' => 280)); ?>
+                            <?php echo $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'], "210px", "280px"), array('height' => 210, 'width' => 280)); ?>
 
                         </div>
                         <div class="pro_detail">
                             <div class="blue18" id="project_name">
 
-            <?php
-            if ($project['Project']['title'] != '') {
-                if ($project['Project']['active'] == 1) {
-                    /** if project is active * */
-                    echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'detail', $project['Project']['User']['slug'], $project['Project']['slug']));
-                } else {
-                    /** if project is not active * */
-                    echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['Project']['User']['slug'], $project['Project']['id'] . '#basics'));
-                }
-            } else {
-                /** if project do not have title * */
-                echo $this->Html->link(__('profile_untitle_project', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['Project']['User']['slug'], $project['Project']['id'] . '#basics'));
-            }
-            ?>
+                                <?php
+                                if ($project['Project']['title'] != '') 
+                                {
+                                    if ($project['Project']['active'] == 1) 
+                                    {
+                                        /** if project is active * */
+                                        echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'detail', $project['Project']['User']['slug'], $project['Project']['slug']));
+                                    } 
+                                    else 
+                                    {
+                                        /** if project is not active * */
+                                        echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['Project']['User']['slug'], $project['Project']['id'] . '#basics'));
+                                    }
+                                } 
+                                else 
+                                {
+                                    /** if project do not have title * */
+                                    echo $this->Html->link(__('profile_untitle_project', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['Project']['User']['slug'], $project['Project']['id'] . '#basics'));
+                                }
+                                ?>
                                 <br />
                                 <span class="grey11"><?php echo strtolower(__('frnt_by')); ?>&nbsp;<?php echo $this->Html->link($project['Project']['User']['name'], array('plugin' => 'users', 'controller' => 'users', 'action' => 'profile', 'slug' => $project['Project']['User']['slug']), array('target' => '_blank')); ?></span>
                             </div>
                             <div class="clr"></div>
-                            <div class="pro_txt"><?php echo ucfirst($text->truncate($project['Project']['short_description'], 200, array('ending' => '...', 'exact' => false, 'html' => true))); ?></div>
+                            <div class="pro_txt">
+                                <?php echo ucfirst($text->truncate($project['Project']['short_description'], 200, array('ending' => '...', 'exact' => false, 'html' => true))); ?>
+                            </div>
                             <div class="clr pt10"></div>
                             <div>
-            <?php if ($project['Project']['Category']['category_name'] != '') { ?>
+                                <?php if ($project['Project']['Category']['category_name'] != '') { ?>
                                     <div class="fl">
-                <?php echo $this->Html->image('front/documentry.png', array('width' => '17', 'height' => '17')); ?>
+                                        <?php echo $this->Html->image('front/documentry.png', array('width' => '17', 'height' => '17')); ?>
                                     </div>
                                     <div class="grey11 fl pt2"><?php echo $this->Html->link($project['Project']['Category']['category_name'], array('plugin' => false, 'controller' => 'projects', 'action' => 'category_projects', $project['Project']['Category']['slug'])); ?></div>
                                 <?php } ?>
@@ -95,16 +106,16 @@ if (count($projects) > 0) {
                                     <?php echo $this->Html->image('front/location-icon.png', array('width' => '17', 'height' => '17')); ?>  
                                 </div>
                                 <div class="grey11 fl pt2">
-                                <?php
-                                $project_city_info = $this->GeneralFunctions->get_json_to_city_name($project['Project']['project_city_json']);
-                                echo $this->Html->link($project_city_info['city_name'], array('plugin' => false, 'controller' => 'projects', 'action' => 'index', 'city/' . $project_city_info['id']));
-                                ?>
+                                    <?php
+                                    $project_city_info = $this->GeneralFunctions->get_json_to_city_name($project['Project']['project_city_json']);
+                                    echo $this->Html->link($project_city_info['city_name'], array('plugin' => false, 'controller' => 'projects', 'action' => 'index', 'city/' . $project_city_info['id']));
+                                    ?>
                                 </div>
                                 <!-- Show Update And Faq to Owner -->    
 
-                                    <?php if (($slug == $this->Session->read('Auth.User.slug'))) { ?>
+                                <?php if (($slug == $this->Session->read('Auth.User.slug'))) { ?>
                                     <div class="grey12 fr pt2 pr10">
-                <?php echo $this->Html->link(__('remove', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'delete_stared_project', $project['StaredProject']['id']), array('escape' => false)); ?>
+                                        <?php echo $this->Html->link(__('remove', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'delete_stared_project', $project['StaredProject']['id']), array('escape' => false)); ?>
                                     </div>
                                     <?php
                                 }
@@ -113,19 +124,22 @@ if (count($projects) > 0) {
 
                             </div>
                             <div class="clr pt5"></div>
-                                <?php if ($project['Project']['active'] == 1) { ?>
-                <?php /**                 * ******if project is activate********** */ ?>
+                            <?php if ($project['Project']['active'] == 1) { ?>
+                                <?php /*********if project is activate********** */ ?>
                                 <div class="fnction_bg">
                                     <div class="running">
                                         <div class="aligncenter mt10">
-                                <?php
-                                $total_funded_percentage = $this->GeneralFunctions->total_funded_percentage($project['Project']['id'], $project['Project']['funding_goal'], $project['Project']['Backer']);
-                                if ($total_funded_percentage > 100) {
-                                    $total_funded_slider_percentage = 100;
-                                } else {
-                                    $total_funded_slider_percentage = $total_funded_percentage;
-                                }
-                                ?>
+                                            <?php
+                                            $total_funded_percentage = $this->GeneralFunctions->total_funded_percentage($project['Project']['id'], $project['Project']['funding_goal'], $project['Project']['Backer']);
+                                            if ($total_funded_percentage > 100) 
+                                            {
+                                                $total_funded_slider_percentage = 100;
+                                            } 
+                                            else 
+                                            {
+                                                $total_funded_slider_percentage = $total_funded_percentage;
+                                            }
+                                            ?>
                                             <div class="project-pledged-wrap">
                                                 <div style="width: <?php echo $total_funded_slider_percentage; ?>%" class="project-pledged"></div>
                                             </div>
@@ -142,25 +156,32 @@ if (count($projects) > 0) {
                                         </div>
                                     </div>
                                     <div class="funded">
-                                        <div class="grey22 mt9"><?php
-                            if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) { // for funded 
-                                __('frnt_funded');
-                            } else {
+                                        <div class="grey22 mt9">
+                                            <?php
+                                            if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) 
+                                            { // for funded 
+                                                __('frnt_funded');
+                                            } 
+                                            else 
+                                            {
 
-                                if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running
-                                    __('frnt_funding');
-                                }
-                            }
-                                ?><br/>
+                                                if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) 
+                                                { // currently running
+                                                    __('frnt_funding');
+                                                }
+                                            }
+                                            ?><br/>
                                             <span class="grey11"><?php echo date(Configure::read('FRONT_UPDATES_DATE_FORMAT'), $project['Project']['project_end_date']); ?></span>
                                         </div>
                                     </div>
                                 </div> 
 
-                                        <?php
-                                        } else {
-                                            /**                                             * ******if project is not activated********** */
-                                            ?>
+                            <?php
+                            } 
+                            else 
+                            {
+                                /*********if project is not activated********** */
+                            ?>
 
                                 <div class="fnction_bg">
                                     <div class="running">
@@ -172,7 +193,7 @@ if (count($projects) > 0) {
                                         <span class="grey14">(<?php __('only_u_can_c'); ?>)</span>
                                     </div>
                                 </div>
-            <?php } ?>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="clr"></div>
@@ -180,15 +201,17 @@ if (count($projects) > 0) {
                 <div class="box_bot"></div>
             </div>
             <div class="clr pt15"></div>
-                            <?php
-                        } // end of starred projects
-                        else { // Start For non-starred projects
-                            $total_pledge_amount = $this->GeneralFunctions->get_total_pledge_amount($project['Backer']);
-                            ?>
+            <?php
+            } // end of starred projects
+            else { // Start For non-starred projects
+            $total_pledge_amount = $this->GeneralFunctions->get_total_pledge_amount($project['Backer']);
+            ?>
 
             <div class="project_box">
 
-            <?php if ($project['Project']['active'] == 1 && $project['Project']['is_cancelled'] == 1) { // for cancelled 
+                <?php 
+                if (($project['User']['is_deleted'] == 1) || ($project['Project']['active'] == 1 && $project['Project']['is_cancelled'] == 1)) 
+                { // for cancelled 
                 ?>
 
                     <div class="cancelled_ribbon">
@@ -201,11 +224,11 @@ if (count($projects) > 0) {
                         <div class="cancelled_ribbon_right"></div>
                     </div>
 
-            <?php
-            } else if ($project['Project']['active'] == 1 &&
-                    $project['Project']['project_end_date'] < time() &&
-                    $total_pledge_amount >= $project['Project']['funding_goal']) { // for funded 
-                ?>
+                <?php
+                } else if ($project['Project']['active'] == 1 &&
+                        $project['Project']['project_end_date'] < time() &&
+                        $total_pledge_amount >= $project['Project']['funding_goal']) { // for funded 
+                    ?>
 
                     <div class="green_ribbon">
                         <div class="yellow_left"></div>
@@ -217,9 +240,9 @@ if (count($projects) > 0) {
                         <div class="yellow_right"></div>
                     </div>
 
-            <?php
-            } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running 
-                ?>
+                    <?php
+                } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running 
+                    ?>
 
                     <div class="green_ribbon">
                         <div class="ribbon_left"></div>
@@ -231,32 +254,32 @@ if (count($projects) > 0) {
                         <div class="ribbon_right"></div>
                     </div>
 
-            <?php } ?>
+                <?php } ?>
 
                 <div class="box_top"></div>
                 <div class="clr"></div>
                 <div class="box_bg">
                     <div class="mrgn_auto width90per">
                         <div class="fl pro_video">
-            <?php echo $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'], "210px", "280px"), array('height' => 210, 'width' => 280)); ?>
+                            <?php echo $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'], "210px", "280px"), array('height' => 210, 'width' => 280)); ?>
                         </div>
                         <div class="pro_detail">
                             <div class="blue18" id="project_name">
 
-            <?php
-            if ($project['Project']['title'] != '') {
-                if ($project['Project']['active'] == 1) {
-                    /** if project is active * */
-                    echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'detail', $project['User']['slug'], $project['Project']['slug']));
-                } else {
-                    /** if project is not active * */
-                    echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['User']['slug'], $project['Project']['id'] . '#basics'));
-                }
-            } else {
-                /** if project do not have title * */
-                echo $this->Html->link(__('profile_untitle_project', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['User']['slug'], $project['Project']['id'] . '#basics'));
-            }
-            ?>
+                                <?php
+                                if ($project['Project']['title'] != '') {
+                                    if ($project['Project']['active'] == 1) {
+                                        /** if project is active * */
+                                        echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'detail', $project['User']['slug'], $project['Project']['slug']));
+                                    } else {
+                                        /** if project is not active * */
+                                        echo $this->Html->link(ucfirst($project['Project']['title']), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['User']['slug'], $project['Project']['id'] . '#basics'));
+                                    }
+                                } else {
+                                    /** if project do not have title * */
+                                    echo $this->Html->link(__('profile_untitle_project', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['User']['slug'], $project['Project']['id'] . '#basics'));
+                                }
+                                ?>
                                 <br>
                                 <span class="grey11"><?php echo strtolower(__('frnt_by')); ?>&nbsp;<?php echo $this->Html->link($project['User']['name'], array('plugin' => 'users', 'controller' => 'users', 'action' => 'profile', 'slug' => $project['User']['slug']), array('target' => '_blank')); ?></span>
                             </div>
@@ -268,40 +291,40 @@ if (count($projects) > 0) {
                                 <?php if ($project['Category']['category_name'] != '') {
                                     ?>
                                     <div class="fl">
-                                    <?php echo $this->Html->image('front/documentry.png', array('width' => '17', 'height' => '17')); ?>
+                                        <?php echo $this->Html->image('front/documentry.png', array('width' => '17', 'height' => '17')); ?>
                                     </div>
                                     <div class="grey11 fl pt2"><?php echo $this->Html->link($project['Category']['category_name'], array('plugin' => false, 'controller' => 'projects', 'action' => 'category_projects', $project['Category']['slug'])); ?></div>
 
-            <?php } ?>
+                                <?php } ?>
                                 <div class="fl pl5">
-            <?php echo $this->Html->image('front/location-icon.png', array('width' => '17', 'height' => '17')); ?>  
+                                    <?php echo $this->Html->image('front/location-icon.png', array('width' => '17', 'height' => '17')); ?>  
                                 </div>
 
                                 <div class="grey11 fl pt2">
 
-                                <?php
-                                $project_city_info = $this->GeneralFunctions->get_json_to_city_name($project['Project']['project_city_json']);
-                                echo $this->Html->link($project_city_info['city_name'], array('plugin' => false, 'controller' => 'projects', 'action' => 'index', 'city/' . $project_city_info['id']));
-                                ?>
+                                    <?php
+                                    $project_city_info = $this->GeneralFunctions->get_json_to_city_name($project['Project']['project_city_json']);
+                                    echo $this->Html->link($project_city_info['city_name'], array('plugin' => false, 'controller' => 'projects', 'action' => 'index', 'city/' . $project_city_info['id']));
+                                    ?>
                                 </div>
                                 <div class="clr pt5"></div>
                                 <!-- Show Update And Faq to Owner -->    
 
-                                    <?php
-                                    if (($project['Project']['active'] == 1 ) &&
-                                            ($project['User']['id'] == $this->Session->read('Auth.User.id')) &&
-                                            $project['Project']['is_cancelled'] == 0) {
-                                        ?>
+                                <?php
+                                if (($project['Project']['active'] == 1 ) &&
+                                        ($project['User']['id'] == $this->Session->read('Auth.User.id')) &&
+                                        $project['Project']['is_cancelled'] == 0) {
+                                    ?>
 
                                     <div class="grey12 fr pt2">
                                         <?php echo $this->Html->link(__('profile_project_faq', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'project_faq', $project['User']['slug'], $project['Project']['slug']), array('escape' => false)); ?>
                                     </div> 
 
                                     <div class="grey12 fr pt2 pr10">
-                <?php echo $this->Html->link(__('profile_project_update', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'project_update', $project['User']['slug'], $project['Project']['slug']), array('escape' => false)); ?>
+                                        <?php echo $this->Html->link(__('profile_project_update', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'project_update', $project['User']['slug'], $project['Project']['slug']), array('escape' => false)); ?>
                                     </div>
 
-                                <?php
+                                    <?php
                                 }
 
                                 // show edit link if project is not finished yet to user 
@@ -313,7 +336,7 @@ if (count($projects) > 0) {
                                             <?php echo $this->Html->link(__('project_edit', true) . '*', array('plugin' => false, 'controller' => 'projects', 'action' => 'edit', $project['User']['slug'], $project['Project']['id'] . '#basics'), array('escape' => false)); ?>&nbsp;
                                         </div> 
 
-                                    <?php
+                                        <?php
                                     }
 
                                     if (($remaining_time > 0) &&
@@ -321,32 +344,32 @@ if (count($projects) > 0) {
                                             $project['Project']['is_cancelled'] == 0) {  // show cancel link  
                                         ?> 
                                         <div class="grey12 fr pt2 pr10"></div> 
-                                        <?php }
+                                    <?php
                                     }
-                                    ?>
+                                }
+                                ?>
 
                                 <!-- Show Update And Faq to Owner -->    
 
                             </div>
                             <div class="clr pt5"></div>
 
-                                <?php
-                                if ($project['Project']['active'] == 1) {
-                                    /**                                     * ******if project is activate********** */
-                                    ?>
-
+                            <?php
+                            if ($project['Project']['active'] == 1) {
+                                /********if project is activate***********/
+                                ?>
                                 <div class="fnction_bg">
                                     <div class="running">
                                         <div class="aligncenter mt10">
 
-                                <?php
-                                $total_funded_percentage = $this->GeneralFunctions->total_funded_percentage($project['Project']['id'], $project['Project']['funding_goal'], $project['Backer']);
-                                if ($total_funded_percentage > 100) {
-                                    $total_funded_slider_percentage = 100;
-                                } else {
-                                    $total_funded_slider_percentage = $total_funded_percentage;
-                                }
-                                ?>
+                                            <?php
+                                            $total_funded_percentage = $this->GeneralFunctions->total_funded_percentage($project['Project']['id'], $project['Project']['funding_goal'], $project['Backer']);
+                                            if ($total_funded_percentage > 100) {
+                                                $total_funded_slider_percentage = 100;
+                                            } else {
+                                                $total_funded_slider_percentage = $total_funded_percentage;
+                                            }
+                                            ?>
                                             <div class="project-pledged-wrap">
                                                 <div style="width: <?php echo $total_funded_slider_percentage; ?>%" class="project-pledged"></div>
                                             </div>
@@ -366,13 +389,13 @@ if (count($projects) > 0) {
                                     <div class="funded">
                                         <div class="grey22 mt9">
 
-                <?php
-                if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) {
-                    __('frnt_funded');
-                } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running
-                    __('frnt_funding');
-                }
-                ?>
+                                            <?php
+                                            if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) {
+                                                __('frnt_funded');
+                                            } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running
+                                                __('frnt_funding');
+                                            }
+                                            ?>
                                             <br/>
                                             <span class="grey11"><?php echo date(Configure::read('FRONT_UPDATES_DATE_FORMAT'), $project['Project']['project_end_date']); ?></span>
                                         </div>
@@ -380,40 +403,37 @@ if (count($projects) > 0) {
 
                                 </div> 
 
-                                            <?php
-                                            if ($type == 'created') {
-                                                if ($project['Project']['is_cancelled'] == 1) {
-                                                    ?>
+                                <?php
+                                if ($type == 'created') {
+                                    if ($project['Project']['is_cancelled'] == 1) {
+                                        ?>
                                         <div class="project-cancelled">
                                             <strong><?php __('frnt_project_cancelled'); ?></strong>
                                         </div>
-                    <?php
-                    } else if ($project['Project']['project_end_date'] < time() && $total_pledge_amount <= $project['Project']['funding_goal']) {
-                        ?>
+                                        <?php
+                                    } else if ($project['Project']['project_end_date'] < time() && $total_pledge_amount <= $project['Project']['funding_goal']) {
+                                        ?>
                                         <div class="project-unsuccessful">
                                             <strong><?php __('project_unsuccessful'); ?></strong>
                                         </div>
-                        <?php 
-                            }
-                            else if($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal'])
-                            {
-
-                        ?>
-                                <div class="project-successful">
-                                        <strong><?php __('project_successful'); ?></strong>
-                                </div>
-                                    <?php
-                                    } else {
+                                        <?php
+                                    } else if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) {
                                         ?>
+                                        <div class="project-successful">
+                                            <strong><?php __('project_successful'); ?></strong>
+                                        </div>
+                        <?php
+                    } else {
+                        ?>
                                         <div class="project-launched">
                                             <strong><?php __('project_launched'); ?></strong>
                                         </div>
-                                    <?php
-                                    }
-                                }
-                            } else if ($project['Project']['active'] == 2) {
-                                /* If project is rejected by admin */
-                                ?>
+                        <?php
+                    }
+                }
+            } else if ($project['Project']['active'] == 2) {
+                /* If project is rejected by admin */
+                ?>
                                 <div class="fnction_bg">
                                     <div class="running">
                                         <div class="project-not-approved">
@@ -424,11 +444,11 @@ if (count($projects) > 0) {
                                         <span class="grey14">(<?php __('only_u_can_c'); ?>)</span>
                                     </div>
                                 </div>
-                            <?php
-                            } else {
-                                if ($project['Project']['submitted_status'] == "1") {
-                                    /**                                     * ******if project is not activated********** */
-                                    ?>
+                <?php
+            } else {
+                if ($project['Project']['submitted_status'] == "1") {
+                    /**                     * ******if project is not activated********** */
+                    ?>
                                     <div class="fnction_bg">
                                         <div class="running">
                                             <div class="project-not-launched">
@@ -439,9 +459,9 @@ if (count($projects) > 0) {
                                             <span class="grey14">(<?php __('only_u_can_c'); ?>)</span>
                                         </div>
                                     </div>
-                                <?php
-                                } else {
-                                    ?>
+                    <?php
+                } else {
+                    ?>
                                     <div class="fnction_bg">
                                         <div class="running">
                                             <div class="project-not-launched">
@@ -463,57 +483,58 @@ if (count($projects) > 0) {
                 <div class="box_bot"></div>
             </div>
             <div class="clr pt15"></div>
-        <?php }
+        <?php
+        }
     }
     ?>
-                    <?php
-                    if ($this->params['isAjax']) {
-                        if ($current_page != $last_page) {
-                            echo "=================" . $this->Html->url(array('plugin' => 'users', 'controller' => 'users', 'action' => 'load_more_project_content/' . $type . '/' . $slug . '/page:' . $page));
-                        } else {
-                            echo "=================";
-                        }
-                    }
-                } else {
-                    if ($this->params['action'] == 'backed_projects') {
-                        ?>
-        <div class="aligncenter pt40 grey14">
-        <?php
-        if ($this->Session->read('Auth.User.slug') == $slug) {
-            $msg = sprintf(__('profile_project_backer_empty', true), $this->Html->link(__('discover', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'discover'), array('class' => 'blue16 ')));
+    <?php
+    if ($this->params['isAjax']) {
+        if ($current_page != $last_page) {
+            echo "=================" . $this->Html->url(array('plugin' => 'users', 'controller' => 'users', 'action' => 'load_more_project_content/' . $type . '/' . $slug . '/page:' . $page));
         } else {
-            $msg = sprintf(__('profile_project_backer_empty_other_users', true), $this->data['User']['name']);
+            echo "=================";
         }
+    }
+} else {
+    if ($this->params['action'] == 'backed_projects') {
         ?>
+        <div class="aligncenter pt40 grey14">
+            <?php
+            if ($this->Session->read('Auth.User.slug') == $slug) {
+                $msg = sprintf(__('profile_project_backer_empty', true), $this->Html->link(__('discover', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'discover'), array('class' => 'blue16 ')));
+            } else {
+                $msg = sprintf(__('profile_project_backer_empty_other_users', true), $this->data['User']['name']);
+            }
+            ?>
         </div>
     <?php } else if ($this->params['action'] == 'starred_projects') { ?>
         <div class="aligncenter pt40 grey14">
-        <?php
-        if ($this->Session->read('Auth.User.slug') == $slug) {
-            $msg = sprintf(__('profile_project_starred_empty', true), $this->Html->link(__('profile_find_now_lnk', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'discover'), array('class' => 'blue16 ')));
-        } else {
-            $msg = sprintf(__('profile_project_starred_empty_other_users', true), $this->data['User']['name']);
-        }
-        ?>
-        </div>
-        <?php } else if ($this->params['action'] == 'created_projects') { ?>
-        <div class="aligncenter pt40 grey14"><?php
+            <?php
             if ($this->Session->read('Auth.User.slug') == $slug) {
-                $msg = sprintf(__('profile_project_created_empty', true), $this->Html->link(__('profile_start_your_project_lnk', true), array('plugin' => false, 'controller' => 'home', 'action' => 'start'), array('class' => 'blue16 ')));
+                $msg = sprintf(__('profile_project_starred_empty', true), $this->Html->link(__('profile_find_now_lnk', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'discover'), array('class' => 'blue16 ')));
             } else {
-                $msg = sprintf(__('profile_project_created_empty_other_users', true), $this->data['User']['name']);
+                $msg = sprintf(__('profile_project_starred_empty_other_users', true), $this->data['User']['name']);
             }
-            ?></div>
+            ?>
+        </div>
+    <?php } else if ($this->params['action'] == 'created_projects') { ?>
+        <div class="aligncenter pt40 grey14"><?php
+        if ($this->Session->read('Auth.User.slug') == $slug) {
+            $msg = sprintf(__('profile_project_created_empty', true), $this->Html->link(__('profile_start_your_project_lnk', true), array('plugin' => false, 'controller' => 'home', 'action' => 'start'), array('class' => 'blue16 ')));
+        } else {
+            $msg = sprintf(__('profile_project_created_empty_other_users', true), $this->data['User']['name']);
+        }
+        ?></div>
         <?php } else if ($this->params['action'] == 'user_comments') { ?>
 
         <!--for new view page-->
         <div class="aligncenter pt40 grey14"><?php
-            if ($this->Session->read('Auth.User.slug') == $slug) {
-                $msg = sprintf(__('profile_project_created_empty', true), $this->Html->link(__('profile_start_your_project_lnk', true), array('plugin' => false, 'controller' => 'home', 'action' => 'start'), array('class' => 'blue16 ')));
-            } else {
-                $msg = sprintf(__('profile_project_created_empty_other_users', true), $this->data['User']['name']);
-            }
+        if ($this->Session->read('Auth.User.slug') == $slug) {
+            $msg = sprintf(__('profile_project_created_empty', true), $this->Html->link(__('profile_start_your_project_lnk', true), array('plugin' => false, 'controller' => 'home', 'action' => 'start'), array('class' => 'blue16 ')));
+        } else {
+            $msg = sprintf(__('profile_project_created_empty_other_users', true), $this->data['User']['name']);
+        }
             ?></div>
         <?php } ?>
     <div class="pt40 aligncenter grey14"><?php echo $msg; ?> </div>
-    <?php } ?>
+<?php } ?>

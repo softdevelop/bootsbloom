@@ -1,0 +1,10 @@
+Thông tin Cpanel :
+https://87.106.99.159:8443/login_up.php3?LoginTicket=&psa_active_lang=en-US&psa_active_skin=default
+https://87.106.99.159:4643/vz/cp?sso-no-autologin=
+id:	
+pass: cricri5up3rm4n!1
+
+FTP
+stage.boostbloom.com
+User : rootroot
+pass: Cricristftp1%!#@1$%1
