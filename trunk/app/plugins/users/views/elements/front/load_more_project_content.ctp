@@ -5,7 +5,7 @@ if (count($projects) > 0) {
         
         $total_pledge_amount = 0;
         
-        if ($type == 'stared') {
+        if ($type == 'stared') { 
             $total_pledge_amount = $this->GeneralFunctions->get_total_pledge_amount($project['Project']['Backer']);
             $user_image_url = $this->GeneralFunctions->get_user_profile_image_using_user_array($project['Project']['User'], '20px', '20px');
             ?>
@@ -204,6 +204,7 @@ if (count($projects) > 0) {
             <?php
             } // end of starred projects
             else { // Start For non-starred projects
+                
             $total_pledge_amount = $this->GeneralFunctions->get_total_pledge_amount($project['Backer']);
             ?>
 
@@ -240,9 +241,11 @@ if (count($projects) > 0) {
                         <div class="yellow_right"></div>
                     </div>
 
-                    <?php
-                } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running 
-                    ?>
+                <?php
+                } 
+                else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) 
+                { // currently running 
+                ?>
 
                     <div class="green_ribbon">
                         <div class="ribbon_left"></div>
@@ -404,7 +407,7 @@ if (count($projects) > 0) {
                                 </div> 
 
                                 <?php
-                                if ($type == 'created') {
+                                
                                     if ($project['Project']['is_cancelled'] == 1) {
                                         ?>
                                         <div class="project-cancelled">
@@ -430,7 +433,6 @@ if (count($projects) > 0) {
                                         </div>
                         <?php
                     }
-                }
             } else if ($project['Project']['active'] == 2) {
                 /* If project is rejected by admin */
                 ?>
@@ -447,7 +449,7 @@ if (count($projects) > 0) {
                 <?php
             } else {
                 if ($project['Project']['submitted_status'] == "1") {
-                    /**                     * ******if project is not activated********** */
+                    /*** ******if project is not activated********** */
                     ?>
                                     <div class="fnction_bg">
                                         <div class="running">

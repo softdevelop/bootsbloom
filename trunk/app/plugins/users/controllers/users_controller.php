@@ -1519,7 +1519,7 @@ class UsersController extends UsersAppController {
         $country = $this->Country->find('first', array('conditions' => array('Country.iso3166_1' => $this->data['User']['country']), 'fields' => array('Country.name')));
         $this->data['User']['country'] = $country['Country']['name'];
         $result = $this->load_backed_history();
-        var_dump($result['result']);die('123');
+        
         // to show notification
         if ($this->Session->check('project_success')) {
             $project_success = $this->Session->read('project_success');
@@ -1857,8 +1857,20 @@ class UsersController extends UsersAppController {
                 //pr($user_projects);
                 $this->Project->updateAll(array("project_end_date" => time()), array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0));
                 $this->Backer->updateAll(array("is_cancelled" => 1), array('Backer.project_id' => $user_projects));
-
-
+                
+                // list all backers
+                $backers = $this->Backer->find('all', array('conditions' => array('Backer.project_id' => $user_projects)));
+                
+                foreach ($backers as $backer) 
+                {
+                    $this->Notification->create_noti($backer['User']['id'], 'project_cancelled', $backer['Project']['id']);
+                    $backer = $this->User->findById($backer['user_id']);
+                    $to = $backer["User"]["email"];
+                    $this->set("backer", $backer);
+                    $this->set("project", $backer['Project']);
+                    $element = "project_cancellation_to_backer_1";
+                    $this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(), $attachments = "", $sendAs = "html", $bcc = array());
+                }
                 $user_update_array = array();
                 $user_update_array['User']['id'] = $user_id;
                 $user_update_array['User']['is_opt_out'] = 1;

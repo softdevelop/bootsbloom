@@ -479,7 +479,7 @@ class ProjectsController extends AppController
 			$this->set("backer", $backer);
 			$this->set("project", $project);
 			$element = "project_cancellation_to_backer";
-			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(), $attachments = "", $sendAs = "html", $bcc = array());
         }
 		$this->Session->setFlash(__d("projects", "Project and all pledges regarding this project has been cancelled.", true), "admin/success");
         $this->redirect($this->referer());
