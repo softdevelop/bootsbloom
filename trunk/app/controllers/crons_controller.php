@@ -771,13 +771,15 @@ class CronsController extends AppController
 				)
 		));
 		foreach ($successProjects as $successProject) {
-			if($successProject['Project']['is_successful']) {
+			$total_pledge_amount = $this->CommonFunction->get_total_pledge_amount($successProject['Backer']);
+			//if($successProject['Project']['is_successful']) {
+			if($successProject['Project']['project_end_date'] < time() && $total_pledge_amount >= $successProject['Project']['funding_goal']) {
 				$this->send_successfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				
 				$backer_list = array();
 				foreach( $successProject["Backer"] as $backer ) 
 				{
-					$backer_list[] = array( "name" => $backerInfo["User"]["name"], "email" => $backerInfo["User"]["email"] );
+					$backer_list[] = array("name"=>$backer["User"]["name"], "email"=>$backer["User"]["email"]);
 				}
 				$to = $successProject["User"]["email"];
 				$subject = "Backers List for project " . $successProject["Project"]["title"];
@@ -793,7 +795,8 @@ class CronsController extends AppController
 					$backerUser = $this->User->findById($backer['user_id']);
 					$this->send_successfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['id'], $backerUser['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				}
-			} else {
+			//} else {
+			} else if ($successProject['Project']['project_end_date'] < time() && $total_pledge_amount <= $successProject['Project']['funding_goal']) {
 				$this->send_unsuccessfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				foreach ($successProject['Backer'] as $backer) {
 					//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
@@ -820,7 +823,7 @@ class CronsController extends AppController
 	
 	public function send_unsuccessfull_mail_to_owner($email, $user_id, $name, $projectid, $projectname)
 	{
-		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
+		$this->Notification->create_noti($user_id, 'project_unsuccessed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was not funded";
 		$this->set("ownername", $name);
@@ -846,7 +849,7 @@ class CronsController extends AppController
 	
 	public function send_unsuccessfull_mail_to_backers($email, $user_id, $name, $projectid, $projectname)
 	{
-		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
+		$this->Notification->create_noti($user_id, 'project_unsuccessed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was not funded";
 		$this->set("backername", $name);
