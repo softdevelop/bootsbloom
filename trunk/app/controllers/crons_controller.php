@@ -770,6 +770,7 @@ class CronsController extends AppController
 					"Project.is_cancelled" => 0
 				)
 		));
+		//debug($successProjects);
 		foreach ($successProjects as $successProject) {
 			$total_pledge_amount = $this->CommonFunction->get_total_pledge_amount($successProject['Backer']);
 			//if($successProject['Project']['is_successful']) {
@@ -876,21 +877,24 @@ class CronsController extends AppController
 					//'is_successful' => 1,
 					//'project_success_date <=' => $nextTwoDateStart,
 					//'project_success_date >=' => $nextTwoDateEnd,
-					'project_end_date <=' => $nextTwoDateStart,
-					'project_end_date >=' => $nextTwoDateEnd,
+					'project_end_date >=' => $nextTwoDateStart,
+					'project_end_date <' => $nextTwoDateEnd,
 				)
 		));	
+		//debug($nextTwoDateStart);
+		//debug($nextTwoDateEnd);
+		//debug($ending_soon_projects);
 		foreach ($ending_soon_projects as $ending_soon_project) {
-			$this->send_ending_mail_project($ending_soon_project['User']['email'], $ending_soon_project['User']['id'], $ending_soon_project['User']['name'], $ending_soon_project['Project']['id'], $ending_soon_project['Project']['title']);
+			//$this->send_ending_mail_project($ending_soon_project['User']['email'], $ending_soon_project['User']['id'], $ending_soon_project['User']['name'], $ending_soon_project['Project']['id'], $ending_soon_project['Project']['title']);
 			
 			$email_temp["project_link"] = Router::url(array( "plugin" => false, "controller" => "projects", "action" => "detail" ), true) . "/" . $ending_soon_project["User"]["slug"] . "/" . $ending_soon_project["Project"]["slug"];
             $email_temp["user_link"] = Router::url(array( "plugin" => "users", "controller" => "users", "action" => "profile", "slug" => $ending_soon_project["User"]["slug"] ), true);
             $email_temp["category_link"] = Router::url(array( "plugin" => false, "controller" => "projects", "action" => "category_projects", $ending_soon_project["Category"]["slug"] ), true);
-			$view->set("ending_soon_project", $ending_soon_project);
-            $view->set("email_temp", $email_temp);
-			$this->Notification->create_noti($user_id, 'project_ending_soon', $ending_soon_project['Project']['id']);
-			$to = $ending_soon_project;
-			$subject = "Project " . $projectname . " will ending in 48 hours next";
+			$this->set("ending_soon_project", $ending_soon_project);
+            $this->set("email_temp", $email_temp);
+			$this->Notification->create_noti($ending_soon_project['User']['id'], 'project_ending_soon', $ending_soon_project['Project']['id']);
+			$to = $ending_soon_project['User']['email'];
+			$subject = "Project " . $ending_soon_project['Project']['title'] . " will ending in 48 hours next";
 			$element = "ending_soon_notification";
 			$replyTo = "";
 			$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";

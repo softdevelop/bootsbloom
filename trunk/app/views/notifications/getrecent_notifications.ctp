@@ -205,8 +205,31 @@ if (count($recentActivities) > 0) {
                 ?>           
             </li>
             <?php
+        }
+		
+        else  if ($recentActivity['Notification']['notification_type'] == 'project_ending_soon') {
+            ?>
+            <li>
+                <?php
+                $project = $this->GeneralFunctions->get_project_info($recentActivity['Notification']['subject_id'], $fields = array('User.name','User.slug', 'User.profile_image', 'User.fb_image_url','Project.title','Project.slug','Project.image','Project.title'));
+                $friend = $this->GeneralFunctions->get_user_info($recentActivity['Notification']['friend_id'], $fields = array('User.name','User.slug', 'User.profile_image'));
+                
+                if(isset($friend['User']['name'])) {
+                    $div = '<div><div class="fl">' . $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'],'40px','40px'), array('height' => 40, 'width' => 40, 'escape' => false)) . '</div><div class="fl pl5"><strong>' . ucfirst($text->truncate( $project['Project']['title'], 40, array('ending' => '...', 'exact' => false, 'html' => true))). '</strong><br /><span class="pt10">'.$friend['User']['name'].' '.__('notification_comment_project_owner',true). '</span></div></div>';
+                } else {
+                    
+                    $div = '<div><div class="fl">' . $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'],'40px','40px'), array('height' => 40, 'width' => 40, 'escape' => false)) . '</div><div class="fl pl5"><strong>'. ucfirst($text->truncate( $project['Project']['title'], 40, array('ending' => '...', 'exact' => false, 'html' => true))). ' will ends in just 48 hours. </strong><br /></div></div>';
+                }
+                
+                echo $this->Html->link($div, array('controller' => 'projects', 'action' => 'detail', $project['User']['slug'], $project['Project']['slug']), array('alt' => '', 'escape' => false));
+                
+                ?>           
+            </li>
+            <?php
        
         }
+		
+		
     }
 } else {
     ?>
