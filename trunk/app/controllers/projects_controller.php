@@ -2448,7 +2448,10 @@ class ProjectsController extends AppController
 					$to = $backer["User"]["email"];
 					//$subject = "Project " . $projectname . " was project reward survey";
 					$subject = $this->data["ProjectSurvey"]["survey_subject"];
-					$this->set("ownername", $backer["User"]["name"]);
+					$owner = $this->User->find('first', array('conditions' => array(
+						'id' => $this->Session->read("Auth.User.id"),
+					)));
+					$this->set("ownername", $owner["User"]["name"]);
 					$this->set("surveyname", $backer["User"]["name"]);
 					$this->set("projectname", $backer["Project"]["title"]);
 					$this->set("surveymessage", $this->data["ProjectSurvey"]["survey_message"]);

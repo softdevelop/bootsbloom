@@ -19,12 +19,13 @@
                 <table class="content">
                     <tr class="word-wrap pt10 pb10">
                         <td>
-                           Dear <?php echo ucfirst($surveyname); ?>, project <?php echo ucfirst($projectname); ?>  was successfully funded.
+                           Dear <?php echo ucfirst($surveyname); ?>, 
                         </td>
                     </tr>
                     <tr class="word-wrap pt10 pb10">
                         <td>
 							<div>
+								<?php echo ucfirst($ownername); ?> (owner of  <?php echo ucfirst($projectname); ?> project)  sent to you an message with content:<br/><br/>
 								<?php echo ucfirst($surveymessage); ?><br/><br/>
 								Thank you, <br/>
 								Boostbloom
