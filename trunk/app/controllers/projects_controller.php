@@ -458,7 +458,7 @@ class ProjectsController extends AppController
 	
 		/*Send mail*/
 		$project = $this->Project->findById($id);
-		$this->Notification->create_noti($project['User']['id'], 'project_cancelled', $project_id);
+		$this->Notification->create_noti($project['User']['id'], 'project_cancelled', $id);
 		
 		$this->set("project", $project);
 		$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
@@ -473,10 +473,11 @@ class ProjectsController extends AppController
         //foreach($project['Backer'] as $key => $backer)
         foreach($project['Backer'] as $backer)
         {
-            $this->Notification->create_noti($backer['User']['id'], 'project_cancelled', $backer['Project']['id']);
-			$backer = $this->User->findById($backer['user_id']);
-			$to = $backer["User"]["email"];
-			$this->set("backer", $backer);
+			$backerUser = $this->User->findById($backer['user_id']);
+            //$this->Notification->create_noti($backer['User']['id'], 'project_cancelled', $id);
+            $this->Notification->create_noti($backer['user_id'], 'project_cancelled', $id);
+			$to = $backerUser["User"]["email"];
+			$this->set("backer", $backerUser);
 			$this->set("project", $project);
 			$element = "project_cancellation_to_backer";
 			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(), $attachments = "", $sendAs = "html", $bcc = array());

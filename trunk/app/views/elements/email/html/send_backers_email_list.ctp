@@ -27,16 +27,11 @@
                     </tr>
                     <tr class="word-wrap pt10 pb10">
                         <td>
-                          Happy rewarding! And congratulations!
-                        </td>
-                    </tr>
-                    <tr class="word-wrap pt10 pb10">
-                        <td>
                             <table>
                                 <?php foreach ($backer_list as $backer){ ?>
                                 <tr>
                                     <td>
-                                        <?php echo $backer['name']; ?>
+                                        <?php echo $backer['name']; ?>:
                                     </td>
                                     <td>
                                         <?php echo $backer['email']; ?>
@@ -48,6 +43,11 @@
                         </td>
                     </tr>
                  
+                    <tr class="word-wrap pt10 pb10">
+                        <td>
+                          Happy rewarding! And congratulations!
+                        </td>
+                    </tr>
                 </table>   
             </td>
         </tr>

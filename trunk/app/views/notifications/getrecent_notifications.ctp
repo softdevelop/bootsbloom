@@ -134,7 +134,7 @@ if (count($recentActivities) > 0) {
                     $div = '<div><div class="fl">' . $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'],'40px','40px'), array('height' => 40, 'width' => 40, 'escape' => false)) . '</div><div class="fl pl5"><strong>' . ucfirst($text->truncate( $project['Project']['title'], 40, array('ending' => '...', 'exact' => false, 'html' => true))). ' - Backed project has been cancelled </strong><br /></div></div>';
                 }
                 
-                echo $this->Html->link($div, array('#'), array('alt' => '', 'escape' => false));
+                echo $this->Html->link($div, array('controller' => 'projects', 'action' => 'detail', $project['User']['slug'], $project['Project']['slug']), array('alt' => '', 'escape' => false));
                 
                 ?>           
             </li>
@@ -156,7 +156,7 @@ if (count($recentActivities) > 0) {
                     $div = '<div><div class="fl">' . $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'],'40px','40px'), array('height' => 40, 'width' => 40, 'escape' => false)) . '</div><div class="fl pl5"><strong>' . ucfirst($text->truncate( $project['Project']['title'], 40, array('ending' => '...', 'exact' => false, 'html' => true))). ' project successfully funded </strong><br /></div></div>';
                 }
                 
-                echo $this->Html->link($div, array('#'), array('alt' => '', 'escape' => false));
+                echo $this->Html->link($div, array('controller' => 'projects', 'action' => 'profile', $project['User']['slug'], $project['Project']['slug']), array('alt' => '', 'escape' => false));
                 
                 ?>           
             </li>
@@ -178,7 +178,7 @@ if (count($recentActivities) > 0) {
                     $div = '<div><div class="fl">' . $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'],'40px','40px'), array('height' => 40, 'width' => 40, 'escape' => false)) . '</div><div class="fl pl5"><strong>' . ucfirst($text->truncate( $project['Project']['title'], 40, array('ending' => '...', 'exact' => false, 'html' => true))). ' project not successfully funded </strong><br /></div></div>';
                 }
                 
-                echo $this->Html->link($div, array('#'), array('alt' => '', 'escape' => false));
+                echo $this->Html->link($div, array('controller' => 'projects', 'action' => 'detail', $project['User']['slug'], $project['Project']['slug']), array('alt' => '', 'escape' => false));
                 
                 ?>           
             </li>
@@ -200,7 +200,7 @@ if (count($recentActivities) > 0) {
                     $div = '<div><div class="fl">' . $this->Html->image($this->GeneralFunctions->show_project_image($project['Project']['image'],'40px','40px'), array('height' => 40, 'width' => 40, 'escape' => false)) . '</div><div class="fl pl5"><strong>'.$project['User']['name'] ."(". ucfirst($text->truncate( $project['Project']['title'], 40, array('ending' => '...', 'exact' => false, 'html' => true))). ' ) sent to you an email </strong><br /></div></div>';
                 }
                 
-                echo $this->Html->link($div, array('#'), array('alt' => '', 'escape' => false));
+                echo $this->Html->link($div, array('controller' => 'projects', 'action' => 'detail', $project['User']['slug'], $project['Project']['slug']), array('alt' => '', 'escape' => false));
                 
                 ?>           
             </li>

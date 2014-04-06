@@ -773,13 +773,14 @@ class CronsController extends AppController
 		foreach ($successProjects as $successProject) {
 			$total_pledge_amount = $this->CommonFunction->get_total_pledge_amount($successProject['Backer']);
 			//if($successProject['Project']['is_successful']) {
-			if($successProject['Project']['project_end_date'] < time() && $total_pledge_amount >= $successProject['Project']['funding_goal']) {
+			if($successProject['Project']['project_end_date'] < $endCurrDate && $total_pledge_amount >= $successProject['Project']['funding_goal']) {
 				$this->send_successfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				
 				$backer_list = array();
 				foreach( $successProject["Backer"] as $backer ) 
 				{
-					$backer_list[] = array("name"=>$backer["User"]["name"], "email"=>$backer["User"]["email"]);
+					$backerUser = $this->User->findById($backer['user_id']);
+					$backer_list[] = array("name"=>$backerUser["User"]["name"], "email"=>$backerUser["User"]["email"]);
 				}
 				$to = $successProject["User"]["email"];
 				$subject = "Backers List for project " . $successProject["Project"]["title"];
@@ -796,7 +797,7 @@ class CronsController extends AppController
 					$this->send_successfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['id'], $backerUser['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				}
 			//} else {
-			} else if ($successProject['Project']['project_end_date'] < time() && $total_pledge_amount <= $successProject['Project']['funding_goal']) {
+			} else if ($successProject['Project']['project_end_date'] < $endCurrDate && $total_pledge_amount < $successProject['Project']['funding_goal']) {
 				$this->send_unsuccessfull_mail_to_owner($successProject['User']['email'], $successProject['User']['id'], $successProject['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
 				foreach ($successProject['Backer'] as $backer) {
 					//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
@@ -839,7 +840,7 @@ class CronsController extends AppController
 		$this->Notification->create_noti($user_id, 'project_successed', $projectid);
 		$to = $email;
 		$subject = "Project " . $projectname . " was funded";
-		$this->set("ownername", $name);
+		$this->set("backername", $name);
 		$this->set("projectname", $projectname);
 		$element = "send_successfull_mail_to_backers";
 		$replyTo = "";
