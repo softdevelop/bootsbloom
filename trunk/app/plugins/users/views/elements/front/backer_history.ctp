@@ -31,22 +31,33 @@ if (count($project_backers) > 0) {
                                     <span class="grey11"><?php __('faq_backer'); ?></span>
                                 </div>
                             </div>
-
+                            
                             <div class="back_history_backker pl10">
                                 <div class="grey22 mt9"><?php echo $total_funded_percentage; ?> %<br>
                                     <span class="grey11"><?php __('frnt_funded'); ?></span>
                                 </div>
                             </div>
+                            
                             <div class="back_history_backker pl10">
                                 <div class="grey22 mt9"><?php echo Configure::read('CONFIG_CURRENCYSYMB'); ?><?php echo $this->GeneralFunctions->get_total_pledge_amount($project_backer['Project']['Backer']); ?><br>
                                     <span class="grey11"><?php __('frnt_pledged'); ?></span>
                                 </div>
                             </div>
+                            <?php if($project_backer['Project']['project_end_date'] < time() || $project_backer['Project']['is_cancelled'] == 1) : ?>
                             <div class="back_history_funded" style="width: 100px">
                                 <div class="grey22 mt9"><?php __('frnt_funded'); ?><br>
                                     <span class="grey11"><?php echo date(Configure::read('FRONT_UPDATES_DATE_FORMAT'), $project_backer['Project']['project_end_date']); ?></span>
                                 </div>
                             </div>
+                            
+                            <?php else: ?>
+                            <div class="back_history_funded" style="width: 100px">
+                                <div class="grey22 mt9"><?php __('frnt_funding'); ?><br>
+                                    <span class="grey11"><?php echo date(Configure::read('FRONT_UPDATES_DATE_FORMAT'), $project_backer['Project']['project_end_date']); ?></span>
+                                </div>
+                            </div>
+                            
+                            <?php endif;?>
                         </div>
                     </div>
                 </div>

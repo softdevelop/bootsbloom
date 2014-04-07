@@ -1576,7 +1576,7 @@ class UsersController extends UsersAppController {
                     'Category' => array(
                         'fields' => array('id', 'category_name', 'slug')
                     ),
-                    'fields' => array('Project.id', 'Project.title', 'Project.slug', 'Project.image', 'Project.project_country', 'Project.project_end_date', 'Project.project_country_json', 'Project.funding_goal', 'Project.short_description', 'Project.is_funded', 'Project.is_successful'),
+                    'fields' => array('Project.id', 'Project.title', 'Project.slug', 'Project.image', 'Project.project_country', 'Project.project_end_date', 'Project.project_country_json', 'Project.funding_goal', 'Project.short_description', 'Project.is_funded', 'Project.is_successful', 'Project.is_cancelled'),
                 ),
                 'Reward' => array(
                     'fields' => array('Reward.pledge_amount')
@@ -1853,9 +1853,19 @@ class UsersController extends UsersAppController {
                 $user_info = $this->Session->read('Auth.User');
                 $user_projects = $this->Project->find('list', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0), 'fields' => array('Project.id')));
                 
+                // HOANGADD 04072014
+                // retrieves all projects of current user
+                $projects_current_user = $this->Project->find('all', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0), 'fields' => array('Project.project_end_date', 'Project.user_id')));
+                                
+                foreach ($projects_current_user as $project_current_user)
+                {
+                    if($project_current_user['Project']['project_end_date'] > time())
+                    {
+                        $this->Project->updateAll(array("is_cancelled" => 1), array('Project.user_id' => $project_current_user['Project']['user_id'], 'Project.active' => 1, 'Project.is_successful' => 0));
+                    }                    
+                }
                 
-                //pr($user_projects);
-                $this->Project->updateAll(array("project_end_date" => time()), array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0));
+               
                 $this->Backer->updateAll(array("is_cancelled" => 1), array('Backer.project_id' => $user_projects));
                 
                 // list all backers

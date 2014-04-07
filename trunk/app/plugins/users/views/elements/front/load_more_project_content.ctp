@@ -1,8 +1,7 @@
 ﻿<?php
 if (count($projects) > 0) {
     foreach ($projects as $project) {
-        
-        
+               
         $total_pledge_amount = 0;
         
         if ($type == 'stared') { 
@@ -211,7 +210,7 @@ if (count($projects) > 0) {
             <div class="project_box">
 
                 <?php 
-                if (($project['User']['is_deleted'] == 1) || ($project['Project']['active'] == 1 && $project['Project']['is_cancelled'] == 1)) 
+                if ($project['Project']['active'] == 1 && $project['Project']['is_cancelled'] == 1) 
                 { // for cancelled 
                 ?>
 
@@ -227,8 +226,7 @@ if (count($projects) > 0) {
 
                 <?php
                 } else if ($project['Project']['active'] == 1 &&
-                        $project['Project']['project_end_date'] < time() &&
-                        $total_pledge_amount >= $project['Project']['funding_goal']) { // for funded 
+                        $project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) { // for funded 
                     ?>
 
                     <div class="green_ribbon">
@@ -393,9 +391,9 @@ if (count($projects) > 0) {
                                         <div class="grey22 mt9">
 
                                             <?php
-                                            if ($project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal']) {
+                                            if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] < time() && $total_pledge_amount >= $project['Project']['funding_goal'] && $project['Project']['is_cancelled'] == 0) {
                                                 __('frnt_funded');
-                                            } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time()) { // currently running
+                                            } else if ($project['Project']['active'] == 1 && $project['Project']['project_end_date'] > time() && $project['Project']['is_cancelled'] == 0) { // currently running
                                                 __('frnt_funding');
                                             }
                                             ?>
