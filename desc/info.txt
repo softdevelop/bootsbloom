@@ -1,12 +1,16 @@
 Thông tin Cpanel :
 https://87.106.99.159:8443/login_up.php3?LoginTicket=&psa_active_lang=en-US&psa_active_skin=default
+
+https://87.106.99.159:8443/domains/databases/phpMyAdmin/index.php?pleskStartSession#PMAURL-0:index.php?db=admin_fix_softdev&table=&server=1&target=&token=11724b6bafb4ec49e552ae186096b754
+
+
 https://87.106.99.159:4643/vz/cp?sso-no-autologin=
-id:	
+id:	root
 pass: cricri5up3rm4n!1
 
 FTP
 stage.boostbloom.com
-User : rootroot
+User : root
 pass: Cricristftp1%!#@1$%1
 
 
