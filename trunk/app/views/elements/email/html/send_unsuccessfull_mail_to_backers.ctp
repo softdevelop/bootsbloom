@@ -28,6 +28,7 @@
                     <tr class="word-wrap pt10 pb10">
                         <td>
 							<div>
+							
 								This means:  <br/>
 								- that your payment was cancelled and that no money was taken from your account. <br/>
 								- that unfortunately, the creator of the project will not send you the selected reward(s)<br/>

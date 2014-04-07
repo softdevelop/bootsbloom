@@ -29,20 +29,27 @@
                     </tr>
                     <tr>
                         <td>
-                            We place tremendous effort to limit such actions but we can’t totally prevent them. 
+                            We place tremendous effort to limit such actions but we can’t totally prevent them.
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Your pledge has been automatically cancelled. No money was taken from your account.
+							Your pledge has been automatically cancelled. No money was taken from your account.
                         </td>
                     </tr>
                     <tr>
-                        <td>  We hope you will find other exciting projects to support.
+                        <td>  
+							We hope you will find other exciting projects to support.
                         </td>
                     </tr>
                     <tr>
-                        <td>  We apologize for the inconvenience.
+                        <td>  
+							We apologize for the inconvenience.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>  
+							The BoostBloom team. 
                         </td>
                     </tr>
                     <tr>

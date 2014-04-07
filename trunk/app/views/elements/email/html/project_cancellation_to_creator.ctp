@@ -37,6 +37,10 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>  The BoostBloom team.
+                        </td>
+                    </tr>
+                    <tr>
                         <td>The <?php echo Configure::read('CONFIG_SITE_TITLE'); ?> team.</td>
                     </tr>
 

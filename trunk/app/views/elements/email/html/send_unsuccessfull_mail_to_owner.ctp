@@ -18,7 +18,7 @@
             <td>
                 <table class="content">
                     <tr class="pt10">
-                        <td>Dear <?php echo ucfirst($backername); ?>,</td>
+                        <td>Dear <?php echo ucfirst($ownername); ?>,</td>
                     </tr>
                     <tr class="word-wrap pt10 pb10">
                         <td>
@@ -28,9 +28,8 @@
                     <tr class="word-wrap pt10 pb10">
                         <td>
 							<div>
-								What you need to do now: <br/>
-								-immediately send a survey to your backers so that you know how to get their rewards <br/>
-								-send us your bank details so we can transfer on your bank account the money you have raised<br/><br/>
+								Try again with another project, and check our tips on how to launch a successful project. Remember we do our best to spread the word about your project, but sharing it around you is also very helpful.<br/>
+								Good luck with your next project on Boostbloom!<br/><br/>
 								Thank you, <br/>
 								Boostbloom
 							</div>
