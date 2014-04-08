@@ -1851,22 +1851,27 @@ class UsersController extends UsersAppController {
                 $this->User->id = $this->Session->read('Auth.User.id');
                 $user_id = $this->Session->read('Auth.User.id');
                 $user_info = $this->Session->read('Auth.User');
-                $user_projects = $this->Project->find('list', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0), 'fields' => array('Project.id')));
+                $user_projects = $this->Project->find('all', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0)));
                 
                 // HOANGADD 04072014
                 // retrieves all projects of current user
-                $projects_current_user = $this->Project->find('all', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0), 'fields' => array('Project.project_end_date', 'Project.user_id')));
-                                
+                $projects_current_user = $this->Project->find('all', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0), 'fields' => array('Project.project_end_date', 'Project.user_id', 'Project.id', 'Project.funding_goal', 'Project.is_cancelled')));
+                
                 foreach ($projects_current_user as $project_current_user)
-                {
-                    if($project_current_user['Project']['project_end_date'] > time())
+                {                    
+                    if($project_current_user['Project']['project_end_date'] > time() && $project_current_user['Project']['is_cancelled'] == 0)
                     {
-                        $this->Project->updateAll(array("is_cancelled" => 1), array('Project.user_id' => $project_current_user['Project']['user_id'], 'Project.active' => 1, 'Project.is_successful' => 0));
-                    }                    
+                        $this->Project->updateAll(array("is_cancelled" => 1), array( 'Project.id' => $project_current_user['Project']['id'], 'Project.user_id' => $project_current_user['Project']['user_id'], 'Project.active' => 1, 'Project.is_successful' => 0));
+                    }   
+                    
+                    if($project_current_user['Project']['funding_goal'] > $this->Project->get_total_pledge_amount($project_current_user['Backer']) && $project_current_user['Project']['project_end_date'] < time() ||  $project_current_user['Project']['project_end_date'] > time())
+                    {
+                        $this->Backer->updateAll(array("is_cancelled" => 1), array('Backer.project_id' => $project_current_user['Project']['id']));
+                    }
                 }
                 
                
-                $this->Backer->updateAll(array("is_cancelled" => 1), array('Backer.project_id' => $user_projects));
+                
                 
                 // list all backers
                 $backers = $this->Backer->find('all', array('conditions' => array('Backer.project_id' => $user_projects)));

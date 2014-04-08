@@ -99,5 +99,14 @@ class Project extends AppModel
         $time = mktime(23, 59, 59, date("m"), date("d") + $days, date("Y"));
         return $time;
     }
-
+    
+    public function get_total_pledge_amount($backer_array=array()) {
+        $total_pledge_amount = 0;
+        if (!empty($backer_array)) {
+            foreach ($backer_array as $backer) {
+                $total_pledge_amount = $total_pledge_amount + $backer['amount'];
+            }
+        }
+        return $total_pledge_amount;
+    }
 }

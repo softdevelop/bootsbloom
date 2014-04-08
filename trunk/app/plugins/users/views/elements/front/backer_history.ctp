@@ -43,14 +43,15 @@ if (count($project_backers) > 0) {
                                     <span class="grey11"><?php __('frnt_pledged'); ?></span>
                                 </div>
                             </div>
-                            <?php if($project_backer['Project']['project_end_date'] < time() || $project_backer['Project']['is_cancelled'] == 1) : ?>
+                            
+                            <?php if($project_backer['Project']['project_end_date'] < time() && (int)$project_backer['Project']['funding_goal'] <= $this->GeneralFunctions->get_total_pledge_amount($project_backer['Project']['Backer'])) : ?>
                             <div class="back_history_funded" style="width: 100px">
                                 <div class="grey22 mt9"><?php __('frnt_funded'); ?><br>
                                     <span class="grey11"><?php echo date(Configure::read('FRONT_UPDATES_DATE_FORMAT'), $project_backer['Project']['project_end_date']); ?></span>
                                 </div>
                             </div>
                             
-                            <?php else: ?>
+                            <?php elseif($project_backer['Project']['project_end_date'] > time() && $project_backer['Project']['is_cancelled'] == 0): ?>
                             <div class="back_history_funded" style="width: 100px">
                                 <div class="grey22 mt9"><?php __('frnt_funding'); ?><br>
                                     <span class="grey11"><?php echo date(Configure::read('FRONT_UPDATES_DATE_FORMAT'), $project_backer['Project']['project_end_date']); ?></span>
@@ -79,7 +80,7 @@ if (count($project_backers) > 0) {
             </div>
             <div class="fl pactiondetail alignjustify">
                 <?php
-				if($project_backer['Backer']['is_cancelled'] == 1){
+				if($project_backer['Project']['is_cancelled'] == 1){
 				__('backer_history_project_cancelled'); 
 				}else{
 					if ($remaining_time > 0 ) {
@@ -87,10 +88,16 @@ if (count($project_backers) > 0) {
 						echo "<div class='clr pt10'></div>";
 						echo $this->Html->link(__('backer_update_pledge', true), array('plugin' => false, 'controller' => 'projects', 'action' => 'pledge', $project_backer['Project']['slug'], $project_backer['Backer']['id']), array('class' => 'button ie_radius'));
 					} else {
-						?>
-						<?php __('backer_history_project_closed'); ?>
+						if((int)$project_backer['Project']['funding_goal'] <= $this->GeneralFunctions->get_total_pledge_amount($project_backer['Project']['Backer']))  {
+						 __('backer_history_project_closed'); 
 						
-					<?php 
+                      } 
+                      else 
+                      {
+                          __('backer_history_project_unsuccessful'); 
+                      }
+                          
+                    
 					} 
 				}
 				?>
