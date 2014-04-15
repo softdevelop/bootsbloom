@@ -20,6 +20,7 @@ a,a img{outline:none;border:none;}
 .clr{clear:both;}
 .bold{font-weight:700;}
 .italic{font-style:italic;}
+.verticleTop {vertical-align: top;}
 .uppercase{text-transform:uppercase;}
 //.sprite{background:url(../../img/front/__sprite.png);}
  .sprite.logo{background:url(../../img/front/__sprite.png) no-repeat -387px 0 ; width:274px;height:33px}
@@ -47,6 +48,7 @@ a,a img{outline:none;border:none;}
 .pl10{padding-left:10px;}
 .pl30{padding-left:30px;}
 .pl5{padding-left:5px;}
+.pl45{padding-left:45px;}
 .pl70{padding-left:70px;}
 .pr5{padding-right:5px;}
 .pr20{padding-right:20px;}

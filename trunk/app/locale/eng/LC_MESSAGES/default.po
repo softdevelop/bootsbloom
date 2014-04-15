@@ -1,7 +1,7 @@
 ######################################## Contact us language constant###########################################################
 
 msgid "backer_history_project_unsuccessful"
-msgstr "project unsuccessful, no money was or will be taken from your account"
+msgstr "Project unsuccessful, no money was or will be taken from your account"
 
 msgid "how_help_u"
 msgstr "How can we help you?"

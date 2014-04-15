@@ -24,7 +24,7 @@
                     </tr>
                     <tr>
                         <td>
-                            Unfortunately, project “<?php echo $project['Project']['title']; ?>” has been cancelled by admin.
+							Unfortunately, project “<?php echo $project['Project']['title']; ?>” has been cancelled.
                         </td>
                     </tr>
                     <tr>
@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td>
-							Your pledge has been automatically cancelled. No money was taken from your account.
+							Your pledge has been automatically cancelled. No money was or will be taken from your account.
                         </td>
                     </tr>
                     <tr>

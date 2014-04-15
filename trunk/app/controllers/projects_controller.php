@@ -2453,6 +2453,7 @@ class ProjectsController extends AppController
 						'id' => $this->Session->read("Auth.User.id"),
 					)));
 					$this->set("ownername", $owner["User"]["name"]);
+					$this->set("owneremail", $owner["User"]["email"]);
 					$this->set("surveyname", $backer["User"]["name"]);
 					$this->set("projectname", $backer["Project"]["title"]);
 					$this->set("surveymessage", $this->data["ProjectSurvey"]["survey_message"]);

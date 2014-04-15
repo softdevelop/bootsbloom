@@ -24,25 +24,23 @@
                     </tr>
                     <tr>
                         <td>
-                            Unfortunately, your project “<?php echo $project['Project']['title']; ?>” has been cancelled by admin.
+							We have cancelled your project “<?php echo $project['Project']['title']; ?>”. All pledges made on it have been cancelled. 
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            We place tremendous effort to limit such actions but we can’t totally prevent them. 
+							Canceling is not recommended because it is a disappointment for backers who believed in you. <br/>
+							We hope you will post another project on Boostbloom. But first, please visit the Help sections of the website where you will find useful advice for your next venture.
                         </td>
                     </tr>
                     <tr>
-                        <td>  We apologize for the inconvenience.
+                        <td>  Good luck, 
                         </td>
                     </tr>
                     <tr>
                         <td>The <?php echo Configure::read('CONFIG_SITE_TITLE'); ?> team.</td>
                     </tr>
-
-
                 </table>
-
             </td>
         </tr>
         <tr>

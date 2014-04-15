@@ -25,7 +25,8 @@
                     <tr class="word-wrap pt10 pb10">
                         <td>
 							<div>
-								<?php echo ucfirst($ownername); ?> (owner of  <?php echo ucfirst($projectname); ?> project)  sent to you an message with content:<br/><br/>
+								Thank you for your support! I am <?php echo ucfirst($ownername); ?> (owner of <?php echo ucfirst($projectname); ?> project). You can send me an email at <?php echo ucfirst($owneremail); ?>. <br/>
+								Here is my message to you: <br/>
 								<?php echo ucfirst($surveymessage); ?><br/><br/>
 								Thank you, <br/>
 								Boostbloom

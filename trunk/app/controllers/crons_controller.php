@@ -894,11 +894,24 @@ class CronsController extends AppController
             $this->set("email_temp", $email_temp);
 			$this->Notification->create_noti($ending_soon_project['User']['id'], 'project_ending_soon', $ending_soon_project['Project']['id']);
 			$to = $ending_soon_project['User']['email'];
-			$subject = "Project " . $ending_soon_project['Project']['title'] . " will ending in 48 hours next";
+			$subject = 'Project "' . $ending_soon_project['Project']['title'] . '" will end in 48 hours.';
 			$element = "ending_soon_notification";
 			$replyTo = "";
 			$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
 			$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+			
+			foreach ($ending_soon_project['Backer'] as $backer) {
+				//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
+				$backerUser = $this->User->findById($backer['user_id']);
+				$this->set("email_temp", $email_temp);
+				$this->Notification->create_noti($backer['user_id'], 'project_ending_soon', $ending_soon_project['Project']['id']);
+				$to = $backerUser['User']['email'];
+				$subject = 'Project "' . $ending_soon_project['Project']['title'] . '" will end in 48 hours.';
+				$element = "ending_soon_notification_to_backers";
+				$replyTo = "";
+				$from = Configure::read("CONFIG_FROMNAME") . "<" . Configure::read("CONFIG_FROMEMAIL") . ">";
+				$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(  ), $attachments = "", $sendAs = "html", $bcc = array(  ));
+			}
 		}
 		exit('ok');
 	}

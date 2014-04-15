@@ -22,7 +22,7 @@
                     </tr>
                     <tr class="word-wrap pt10 pb10">
                         <td>
-                           Here are the emails of your backers. It is essential to communicate with them early and regularly about rewards!
+                           Here are the emails of your backers. It is essential to communicate with them immediately and regularly about rewards. Do not make them wait! They are probably very exciting to get the rewards they have pledged for. 
                         </td>
                     </tr>
                     <tr class="word-wrap pt10 pb10">
