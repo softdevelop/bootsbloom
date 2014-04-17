@@ -1848,6 +1848,8 @@ class UsersController extends UsersAppController {
             } 
             else 
             {
+                $from = Configure::read('CONFIG_FROMNAME') . "<" . Configure::read('CONFIG_FROMEMAIL') . ">";
+                $replyTo = '';
                 $this->User->id = $this->Session->read('Auth.User.id');
                 $user_id = $this->Session->read('Auth.User.id');
                 $user_info = $this->Session->read('Auth.User');
@@ -1855,7 +1857,8 @@ class UsersController extends UsersAppController {
                 
                 // HOANGADD 04072014
                 // retrieves all projects of current user
-                $projects_current_user = $this->Project->find('all', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0), 'fields' => array('Project.project_end_date', 'Project.user_id', 'Project.id', 'Project.funding_goal', 'Project.is_cancelled')));
+                //$projects_current_user = $this->Project->find('all', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0), 'fields' => array('Project.project_end_date', 'Project.user_id', 'Project.id', 'Project.funding_goal', 'Project.is_cancelled')));
+                $projects_current_user = $this->Project->find('all', array('conditions' => array('Project.user_id' => $user_id, 'Project.active' => 1, 'Project.is_successful' => 0)));
                 
                 foreach ($projects_current_user as $project_current_user)
                 {                    
@@ -1868,14 +1871,27 @@ class UsersController extends UsersAppController {
                     {
                         $this->Backer->updateAll(array("is_cancelled" => 1), array('Backer.project_id' => $project_current_user['Project']['id']));
                     }
+					
+					foreach ($project_current_user['Backer'] as $backer) {
+						//$backerUser = $this->User->find('first', array('conditions' => array('id' => $backer['user_id'])));
+						//$backerUser = $this->User->findById($backer['user_id']);
+						
+						//$this->send_successfull_mail_to_backers($backerUser['User']['email'], $backerUser['User']['id'], $backerUser['User']['name'], $successProject['Project']['id'], $successProject['Project']['title']);
+						
+						$this->Notification->create_noti($backer['user_id'], 'project_cancelled', $backer['project_id']);
+						$backerUser = $this->User->findById($backer['user_id']);
+						$to = $backerUser["User"]["email"];
+						$this->set("backer", $backerUser);
+						$this->set("project", $project_current_user['Project']);
+						$element = "project_cancellation_to_backer_1";
+						$subject = Configure::read("CONFIG_SITE_TITLE") . ' Project cancelled';
+						$this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(), $attachments = "", $sendAs = "html", $bcc = array());
+					}
                 }
-                
-               
-                
-                
                 // list all backers
+				/* Error code
                 $backers = $this->Backer->find('all', array('conditions' => array('Backer.project_id' => $user_projects)));
-                
+                var_dump($backers);	die;
                 foreach ($backers as $backer) 
                 {
                     $this->Notification->create_noti($backer['User']['id'], 'project_cancelled', $backer['Project']['id']);
@@ -1886,6 +1902,8 @@ class UsersController extends UsersAppController {
                     $element = "project_cancellation_to_backer_1";
                     $this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(), $attachments = "", $sendAs = "html", $bcc = array());
                 }
+				*/
+				
                 $user_update_array = array();
                 $user_update_array['User']['id'] = $user_id;
                 $user_update_array['User']['is_opt_out'] = 1;
@@ -1896,8 +1914,6 @@ class UsersController extends UsersAppController {
                 $to = $user_info['email'];
                 $subject = Configure::read("CONFIG_SITE_TITLE") . ' Account Deactivated';
                 $element = 'user_account_deleted';
-                $replyTo = '';
-                $from = Configure::read('CONFIG_FROMNAME') . "<" . Configure::read('CONFIG_FROMEMAIL') . ">";
                 $this->_sendMail($to, $from, $replyTo, $subject, $element, $parsingParams = array(), $attachments = "", $sendAs = 'html', $bcc = array());
 
                 $this->Session->delete('fb_logged_in_cus');

@@ -6,6 +6,9 @@ msgstr "Project unsuccessful, no money was or will be taken from your account"
 msgid "FRNT_DISCOVER_GRATE_PROJECT"
 msgstr "START YOUR PROJECTDISCOVER GREAT PROJECTS"
 
+msgid "frnt_discover_grate_project"
+msgstr "Discover great projects"
+
 msgid "how_help_u"
 msgstr "How can we help you?"
 
