@@ -1,1 +1,0 @@
-ALTER TABLE projects ADD sent_mail tinyint NOT NULL DEFAULT 0

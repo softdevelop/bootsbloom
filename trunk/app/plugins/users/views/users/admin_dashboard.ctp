@@ -1,1 +1,0 @@
-<?php echo $this->element("admin/dashboard_".$this->Session->read("Auth.admin.group_id")) ;?>
